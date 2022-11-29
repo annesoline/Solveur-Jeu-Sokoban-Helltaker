@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Rapport AI27 - Helltaker - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p:last-child{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p:last-child,.markdown-body .alert>ul:last-child{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.figma{display:table;position:relative;width:100%;padding-bottom:56.25%}.figma iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;border:1px solid #eee}.markmap-container{height:300px}.markmap-container>svg{width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Rapport-AI27---Helltaker" data-id="Rapport-AI27---Helltaker"><a class="anchor hidden-xs" href="#Rapport-AI27---Helltaker" title="Rapport-AI27---Helltaker"><span class="octicon octicon-link"></span></a><span>Rapport AI27 - Helltaker</span></h1><p><img src="https://d3isma7snj3lcx.cloudfront.net/images/gallery/35/350807/helltaker-pc-639b81ea.png" alt="Luma s'offre une virée en enfer avec Helltaker - Gamekult" loading="lazy"></p><h3 id="Pierre-Gibertini---Anne-Soline-Guilbert–Ly---Romane-Dauge" data-id="Pierre-Gibertini---Anne-Soline-Guilbert–Ly---Romane-Dauge"><a class="anchor hidden-xs" href="#Pierre-Gibertini---Anne-Soline-Guilbert–Ly---Romane-Dauge" title="Pierre-Gibertini---Anne-Soline-Guilbert–Ly---Romane-Dauge"><span class="octicon octicon-link"></span></a><span>Pierre Gibertini - Anne-Soline Guilbert–Ly - Romane Dauge</span></h3><h2 id="Table-des-matières" data-id="Table-des-matières"><a class="anchor hidden-xs" href="#Table-des-matières" title="Table-des-matières"><span class="octicon octicon-link"></span></a><span>Table des matières</span></h2><ol>
+<li><span>Introduction</span></li>
+<li><span>Préliminaires</span>
+<ol>
+<li><span>Présentation des règles du jeu</span></li>
+<li><span>Le problème en STRIPS</span></li>
+</ol>
+</li>
+<li><span>Méthode 1 : ASPPLAN</span>
+<ol>
+<li><span>Représentation du problème</span></li>
+<li><span>Choix d’implémentation et structures de données</span></li>
+<li><span>Expérimentations pratiques</span></li>
+</ol>
+</li>
+<li><span>Méthode 2 : SATPLAN</span>
+<ol>
+<li><span>Représentation du problème</span></li>
+<li><span>Choix d’implémentation et structures de données</span></li>
+<li><span>Expérimentations pratiques</span></li>
+</ol>
+</li>
+<li><span>Comparaison expérimentale des 2 méthodes</span></li>
+<li><span>Annexes</span></li>
+</ol><h2 id="1-Introduction" data-id="1-Introduction"><a class="anchor hidden-xs" href="#1-Introduction" title="1-Introduction"><span class="octicon octicon-link"></span></a><span>1. Introduction</span></h2><p><span>Ce rapport a pour but d’expliquer et de résumer notre projet de AI27. Nous avons adopté deux méthodes pour résoudre les problèmes du jeu Helltaker : SATPLAN et ASPPLAN.</span></p><p><span>Helltaker est un jeu où un héros cherche à se construire un harem de femmes démons. Pour cela, les joueurs doivent réussir à déplacer le héros à travers différents puzzles semés de monstres et de pièges en tout genre.</span></p><h2 id="2-Préliminaires" data-id="2-Préliminaires"><a class="anchor hidden-xs" href="#2-Préliminaires" title="2-Préliminaires"><span class="octicon octicon-link"></span></a><span>2. Préliminaires</span></h2><h3 id="21-Présentation-des-règles-du-jeu" data-id="21-Présentation-des-règles-du-jeu"><a class="anchor hidden-xs" href="#21-Présentation-des-règles-du-jeu" title="21-Présentation-des-règles-du-jeu"><span class="octicon octicon-link"></span></a><span>2.1 Présentation des règles du jeu</span></h3><p><span>Le but du jeu est de résoudre des labyrinthes dans lesquels le héros se déplace sur une grille case par case. Le nombre de mouvements est limité, il y a pour chaque niveau le nombre juste de déplacement nécessaire pour rejoindre les femmes démons, qui marque la réussite du niveau.</span></p><h6 data-id="" id=""></h6><p><img src="https://cdn.canardware.com/2021/05/05014910/6841-helltaker-1.jpg" alt="Helltaker – Canard PC" loading="lazy"></p><p><span>Sur son chemin, le héros rencontre plusieurs obstacles qui rendent le jeu plus complexe et stimulant.</span></p><h4 id="Les-monstres" data-id="Les-monstres"><a class="anchor hidden-xs" href="#Les-monstres" title="Les-monstres"><span class="octicon octicon-link"></span></a><span>Les monstres</span></h4><p><span>Sur le passage du héros se trouvent des monstres. Le héros peut pousser les monstres et peut les tuer dans certaines conditions. Cela lui coûte des déplacements mais est souvent nécessaire pour rejoindre les femmes démons.</span></p><h4 id="Les-pics" data-id="Les-pics"><a class="anchor hidden-xs" href="#Les-pics" title="Les-pics"><span class="octicon octicon-link"></span></a><span>Les pics</span></h4><p><span>Sur certaines cases du puzzle se trouvent des pics. Il en existe deux types, des pics ouverts tout le temps et des pics qui se ferment ou s’ouvrent. Si le héros se déplace sur une case avec un pic ouvert, il perd un déplacement.</span></p><h4 id="Les-blocs" data-id="Les-blocs"><a class="anchor hidden-xs" href="#Les-blocs" title="Les-blocs"><span class="octicon octicon-link"></span></a><span>Les blocs</span></h4><p><span>Des blocs de murs se trouvent sur la carte et gênent le passage du héro. Il peut les déplacer pour libérer le passage.</span></p><h4 id="Les-portes-et-les-clés" data-id="Les-portes-et-les-clés"><a class="anchor hidden-xs" href="#Les-portes-et-les-clés" title="Les-portes-et-les-clés"><span class="octicon octicon-link"></span></a><span>Les portes et les clés</span></h4><p><span>Dans certains niveaux, on trouve sur la carte des clés et des portes. Pour franchir la porte, le héros a besoin de récupérer la clé.</span></p><p><span>Si le héros ne rejoint pas les femmes démons avant la fin du nombre de déplacement, la partie est perdue ! Et il faut recommencer jusqu’à trouver la combinaison parfaite.</span></p><h3 id="22-Le-problème-en-STRIPS" data-id="22-Le-problème-en-STRIPS"><a class="anchor hidden-xs" href="#22-Le-problème-en-STRIPS" title="22-Le-problème-en-STRIPS"><span class="octicon octicon-link"></span></a><span>2.2 Le problème en STRIPS</span></h3><p><span>Afin de toujours trouver la combinaison de déplacement parfaite, quoi de mieux que de modéliser toutes les règles du jeu pour demander à une IA de résoudre ces casse-têtes à notre place ?</span></p><p><span>Pour modéliser ce jeu, nous avons réalisé une analyse détaillée du problème en STRIPS.</span></p><h4 id="Prédicats" data-id="Prédicats"><a class="anchor hidden-xs" href="#Prédicats" title="Prédicats"><span class="octicon octicon-link"></span></a><span>Prédicats</span></h4><p><span>Voici la liste des prédicats :</span></p><pre><code>at(X,Y)
+</code></pre><blockquote>
+<p><span>Représente la position du héro.</span></p>
+</blockquote><pre><code>wall(X,Y)
+</code></pre><blockquote>
+<p><span>Représente la position d’un mur.</span></p>
+</blockquote><pre><code>block(X,Y)
+</code></pre><blockquote>
+<p><span>Représente la position d’un bloc.</span></p>
+</blockquote><pre><code>lock(X,Y)
+</code></pre><blockquote>
+<p><span>Représente la position d’une porte fermée.</span></p>
+</blockquote><pre><code>mob(X,Y)
+</code></pre><blockquote>
+<p><span>Représente la position d’un monstre.</span></p>
+</blockquote><pre><code>spikes(X,Y)
+</code></pre><blockquote>
+<p><span>Représente la position d’un pic</span></p>
+<blockquote>
+<p><strong><span>Remarque :</span></strong><span> nous n’avons pas fait la différence entre les pics qui s’ouvrent et se ferment, et les pics statiques dans la représentation en STRIPS.</span></p>
+</blockquote>
+</blockquote><pre><code>key(X,Y)
+</code></pre><blockquote>
+<p><span>Représente la position d’une clé.</span></p>
+</blockquote><pre><code>demoness(X,Y)
+</code></pre><blockquote>
+<p><span>Représente la position d’une démonne.</span></p>
+</blockquote><pre><code>cell(X,Y)
+</code></pre><blockquote>
+<p><span>Représente la position d’une cellule vide.</span></p>
+</blockquote><h4 id="Etat-initiaux" data-id="Etat-initiaux"><a class="anchor hidden-xs" href="#Etat-initiaux" title="Etat-initiaux"><span class="octicon octicon-link"></span></a><span>Etat initiaux</span></h4><p><span>Voici plusieurs états initiaux possibles :</span></p><pre><code>cell(1, 1)
+cell(2, 1)
+cell(3, 1)
+cell(4, 1)
+cell(5, 1)
+cell(6, 1)
+demoness(6, 1)
+spike(4, 1)
+at(2, 1)
+</code></pre><pre><code>cell(1, 1)
+cell(2, 1)
+cell(3, 1)
+cell(4, 1)
+cell(5, 1)
+cell(6, 1)
+demoness(6, 1)
+at(2, 1)
+</code></pre><h4 id="But" data-id="But"><a class="anchor hidden-xs" href="#But" title="But"><span class="octicon octicon-link"></span></a><span>But</span></h4><p><span>Pour gagner le joueur doit se trouver sur une case à côté d’une démonne. Pour cela, il y a 4 buts possibles (être à droite, à gauche, en haut, ou en bas).</span></p><pre><code>Droite
+at(X, Y) ∧ demoness(X, Y + 1) 
+
+Gauche
+at(X,Y) ∧ demoness(X, Y - 1)
+
+Haut
+at(X,Y) ∧ demoness(X + 1, Y)
+
+Bas
+at(X,Y) ∧ demoness(X - 1, Y)
+</code></pre><h4 id="Actions" data-id="Actions"><a class="anchor hidden-xs" href="#Actions" title="Actions"><span class="octicon octicon-link"></span></a><span>Actions</span></h4><p><span>Pour définir les actions, nous avons choisi de ne pas inclure la variable de temps et de détailler chacune des petites actions et leurs conséquences.</span></p><p><span>Voici la liste des actions :</span></p><ul>
+<li><span>se déplacer</span></li>
+<li><span>pousser un monstre</span></li>
+<li><span>pousser un bloc</span></li>
+<li><span>tuer un monstre</span>
+<ul>
+<li><span>contre un mur</span></li>
+<li><span>un pic</span></li>
+<li><span>contre un autre monstre</span></li>
+</ul>
+</li>
+<li><span>récupérer une clé</span></li>
+<li><span>ouvrir une porte</span></li>
+<li><span>avancer dans une porte sans clé</span></li>
+<li><span>avancer dans un bloc</span>
+<ul>
+<li><span>contre un mur</span></li>
+<li><span>contre un autre bloc</span></li>
+</ul>
+</li>
+<li><span>marcher sur un pic</span></li>
+<li><span>être sur un pic</span></li>
+</ul><blockquote>
+<p><span>Pour chaque action, il existe quatres versions (droite, gauche, haut, bas).</span></p>
+</blockquote><p><span>Le STRIPS complet se trouve en annexe.</span></p><p><span>Cependant nous avons trouvé important d’expliquer certains choix de modélisation.</span></p><h4 id="Les-déplacements-dans-les-blocs" data-id="Les-déplacements-dans-les-blocs"><a class="anchor hidden-xs" href="#Les-déplacements-dans-les-blocs" title="Les-déplacements-dans-les-blocs"><span class="octicon octicon-link"></span></a><span>Les déplacements dans les blocs</span></h4><p><span>Il est possible que dans certains niveaux, le joueur soit obligé de perdre un déplacement volontairement. Pour cela il doit avancer dans un bloc contre un mur ou dans un bloc contre un bloc.</span></p><p><span>Voici l’action associée à un déplacement sur un bloc qui est contre un mur :</span></p><pre><code>Action(move_right_into_block_wall(X,Y))
+PRECOND :
+at (X, Y) ∧ block(X, Y + 1) ∧ wall (X, Y + 2)
+EFFECT :
+at(X, Y)
+</code></pre><h4 id="Les-pics1" data-id="Les-pics"><a class="anchor hidden-xs" href="#Les-pics1" title="Les-pics1"><span class="octicon octicon-link"></span></a><span>Les pics</span></h4><p><span>Lorsque le joueur se retrouve sur un pic, il perd un déplacement. Pour modéliser cela, nous avons fait le choix de diviser cet effet en plusieurs étapes.</span></p><p><span>Premièrement, le joueur peut se déplacer sur un pic :</span></p><pre><code>Action(move_right_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y + 1)
+EFFECT :
+at (X, Y + 1) ∧ ¬ at(X, Y) ∧ ¬ move(H)
+</code></pre><blockquote>
+<p><span>Les autres actions (gauche, haut et bas) se trouvent en annexe.</span></p>
+</blockquote><p><span>Nous avons créé une action “move(H)” qui autorise ou non le déplacement du héro.</span></p><p><span>Lorsque le héros arrive sur le pic, il ne peut plus se déplacer mais une nouvelle action, “on_spike” se déclenche automatiquement.</span><br>
+<span>Cette action autorise à nouveau les déplacements.</span></p><pre><code>Action(on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ ¬ move(X,Y)
+EFFECT :
+at (X, Y) ∧ move(X,Y)
+</code></pre><p><span>Il est possible que le joueur effectue différentes actions qui ont pour effet que le joueur reste sur place.</span><br>
+<span>Il existe certains pics qui s’ouvrent et se ferment en fonction du déplacement du héro.</span></p><p><span>Si le héros s’avance dans un bloc et qu’un pic s’ouvre, il se retrouve donc dans état bloquant.</span></p><p><span>Pour cela nous avons rajouté différentes actions, comme celle d’avancer dans un bloc et d’arriver sur un pic, ce qui a pour effet de ne pas autoriser de déplacement au héro.</span></p><pre><code>Action(move_block_right_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ block(X, Y + 1) ∧ wall (X, Y + 2)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+</code></pre><p><span>Ou encore lorsque le héros pousse un monstre.</span></p><pre><code>Action(push_monster_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X, Y + 1)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+</code></pre><p><span>Toutes les autres actions se trouvent en annexe.</span></p><p><span>Il est aussi important de noter que si un monstre est déplacé sur un pic, il meurt.</span><br>
+<span>Nous avons donc créé la même action que “on_spikes” mais pour les montres, qui a pour effet de faire disparaître le monstre.</span></p><pre><code>Action(monster_on_spikes(X,Y))
+PRECOND :
+mob (X, Y) ∧ spikes (X, Y)
+EFFECT :
+¬ mob(X,Y)
+</code></pre><h2 id="3-Méthode-1--ASPPLAN" data-id="3-Méthode-1--ASPPLAN"><a class="anchor hidden-xs" href="#3-Méthode-1--ASPPLAN" title="3-Méthode-1--ASPPLAN"><span class="octicon octicon-link"></span></a><span>3. Méthode 1 : ASPPLAN</span></h2><p><span>Cette section présente la stratégie adoptée pour la résolution de niveaux de Helltaker en utilisant la programmation en ASP (Answer Set Programming).</span></p><h3 id="31-Représentation-du-problème" data-id="31-Représentation-du-problème"><a class="anchor hidden-xs" href="#31-Représentation-du-problème" title="31-Représentation-du-problème"><span class="octicon octicon-link"></span></a><span>3.1  Représentation du problème</span></h3><h4 id="312-Représentation-des-puzzles" data-id="312-Représentation-des-puzzles"><a class="anchor hidden-xs" href="#312-Représentation-des-puzzles" title="312-Représentation-des-puzzles"><span class="octicon octicon-link"></span></a><span>3.1.2 Représentation des puzzles</span></h4><p><strong><span>Exemple du niveau 1</span></strong></p><p><span>Niveau à modéliser :</span></p><p><img src="https://i.imgur.com/bY2s9dj.png" alt="" loading="lazy"></p><p><span>Ecriture du niveau :</span></p><pre><code>Level 1
+23
+#########
+#### H###
+##  M ###
+## M M###
+#  ######
+# B  B ##
+# B B  D#
+#########
+</code></pre><p><span>Description du niveau en ASP :</span></p><pre><code class="asp hljs">%%% MAP DESCRIPTION
+#const horizon=<span class="hljs-number">23.</span>
+<span class="hljs-function"><span class="hljs-title">cell</span>(<span class="hljs-params">1, 5..6</span>)</span>.
+<span class="hljs-function"><span class="hljs-title">cell</span>(<span class="hljs-params">2, 2..6</span>)</span>.
+<span class="hljs-function"><span class="hljs-title">cell</span>(<span class="hljs-params">3, 2..5</span>)</span>.
+<span class="hljs-function"><span class="hljs-title">cell</span>(<span class="hljs-params">4, 1..2</span>)</span>.
+<span class="hljs-function"><span class="hljs-title">cell</span>(<span class="hljs-params">5, 1..6</span>)</span>.
+<span class="hljs-function"><span class="hljs-title">cell</span>(<span class="hljs-params">6, 1..7</span>)</span>.
+demoness(<span class="hljs-number">6</span>, <span class="hljs-number">7</span>).
+fluent(block(<span class="hljs-number">5</span>, <span class="hljs-number">2</span>), <span class="hljs-number">0</span>).
+fluent(block(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>), <span class="hljs-number">0</span>).
+fluent(block(<span class="hljs-number">6</span>, <span class="hljs-number">2</span>), <span class="hljs-number">0</span>).
+fluent(block(<span class="hljs-number">6</span>, <span class="hljs-number">4</span>), <span class="hljs-number">0</span>).
+fluent(mob(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>), <span class="hljs-number">0</span>).
+fluent(mob(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>), <span class="hljs-number">0</span>).
+fluent(mob(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>), <span class="hljs-number">0</span>).
+fluent(at(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>), <span class="hljs-number">0</span>).
+
+<span class="hljs-function"><span class="hljs-title">step</span>(<span class="hljs-params">0..horizon-1</span>)</span>.
+</code></pre><h4 id="312-Les-prédicats" data-id="312-Les-prédicats"><a class="anchor hidden-xs" href="#312-Les-prédicats" title="312-Les-prédicats"><span class="octicon octicon-link"></span></a><span>3.1.2 Les prédicats</span></h4><p><span>Nous avons utilisé des prédicats binaires pour connaître la position.</span></p><table>
+<thead>
+<tr>
+<th><span>Nom</span></th>
+<th><span>Représentation</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>at(X, Y)</span></td>
+<td><span>position du joueur</span></td>
+</tr>
+<tr>
+<td><span>cell(X, Y)</span></td>
+<td><span>position d’un bloc</span></td>
+</tr>
+<tr>
+<td><span>demoness(X, Y)</span></td>
+<td><span>position d’une femme démon</span></td>
+</tr>
+<tr>
+<td><span>mob(X, Y)</span></td>
+<td><span>position des monstre</span></td>
+</tr>
+<tr>
+<td><span>lock(X, Y)</span></td>
+<td><span>position du cadenas</span></td>
+</tr>
+<tr>
+<td><span>key(X, Y)</span></td>
+<td><span>position de la clé</span></td>
+</tr>
+<tr>
+<td><span>spike(X, Y)</span></td>
+<td><span>position d’un pic</span></td>
+</tr>
+<tr>
+<td><span>trap(X, Y)</span></td>
+<td><span>position d’un piège</span></td>
+</tr>
+</tbody>
+</table><h4 id="312-Les-fluents" data-id="312-Les-fluents"><a class="anchor hidden-xs" href="#312-Les-fluents" title="312-Les-fluents"><span class="octicon octicon-link"></span></a><span>3.1.2 Les fluents</span></h4><p><span>Nous avons utilisé des fluents pour les objets dont l’état peut changer au cours du temps.</span></p><table>
+<thead>
+<tr>
+<th><span>Nom</span></th>
+<th><span>Représentation</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>fluent(at(X, Y), T)</span></td>
+<td><span>la position du joueur sur le puzzle à un moment T</span></td>
+</tr>
+<tr>
+<td><span>fluent(block(X, Y), T)</span></td>
+<td><span>la position des blocs sur le puzzle à un moment T</span></td>
+</tr>
+<tr>
+<td><span>fluent(mob(X, Y), T)</span></td>
+<td><span>la position des monstres sur le puzzle à un moment T</span></td>
+</tr>
+<tr>
+<td><span>fluent(spike(X, Y), T)</span></td>
+<td><span>la position d’un pic sur le puzzle à un moment T</span></td>
+</tr>
+<tr>
+<td><span>fluent(trap(X, Y), T, E)</span></td>
+<td><span>la position d’un piège sur le puzzle à un moment T et son état E (</span><em><span>safe</span></em><span> ou </span><em><span>unsafe</span></em><span>)</span></td>
+</tr>
+<tr>
+<td><span>fluent(lock(X, Y), T)</span></td>
+<td><span>la position d’un cadenas sur la puzzle à un moment T</span></td>
+</tr>
+</tbody>
+</table><blockquote>
+<p><span>Nous avons utilisé des fluents pour le </span><strong><span>joueur</span></strong><span>, les </span><strong><span>blocs</span></strong><span> et les </span><strong><span>monstres</span></strong><span> car ces derniers peuvent se déplacer entre chaque pas de temps, et disparaître dans le cas des </span><strong><span>monstres</span></strong><span>.</span></p>
+</blockquote><blockquote>
+<p><span>Nous avons utilisé des fluents pour les </span><strong><span>pics</span></strong><span> car nous avons considéré que les pièges </span><em><span>unsafe</span></em><span> à l’instant T induisent un pic sur la même cellule à l’instant T.</span></p>
+</blockquote><blockquote>
+<p><span>Nous avons utilisé des fluents ternaires pour les </span><strong><span>pièges</span></strong><span> afin d’écrire leur état à chaque pas de temps.</span></p>
+</blockquote><blockquote>
+<p><span>Nous avons utilisé des fluents pour les </span><strong><span>cadenas</span></strong><span> car ces derniers disparaissent une fois le joueur passé sur la cellule correspondante, avec la clé.</span></p>
+</blockquote><h4 id="313-L’objectif" data-id="313-L’objectif"><a class="anchor hidden-xs" href="#313-L’objectif" title="313-L’objectif"><span class="octicon octicon-link"></span></a><span>3.1.3 L’objectif</span></h4><p><span>L’objectif est identique, le joueur doit rejoindre les femmes démons.</span><br>
+<span>Ce but est en réalité atteint lorsque le joueur se trouve à côté d’une cellule des femmes démons.</span></p><blockquote>
+<p><span>N’importe quelle femme démon, afin de pouvoir résoudre le </span><strong><span>niveau 3</span></strong><span> composé de 3 femmes démons.</span></p>
+</blockquote><p><span>Voici la modélisation que nous avons choisi :</span></p><pre><code class="asp hljs">%%% OBJECTIVE
+% test
+achieved(T) :- <span class="hljs-built_in">meet</span>(<span class="hljs-built_in">demoness</span>(_, _), T), <span class="hljs-built_in">demoness</span>(_, _).
+:- not <span class="hljs-built_in">achieved</span>(_).
+% conditions
+<span class="hljs-built_in">meet</span>(<span class="hljs-built_in">demoness</span>(X+<span class="hljs-number">1</span>, Y), T) :- <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), <span class="hljs-built_in">demoness</span>(X+<span class="hljs-number">1</span>, Y).
+<span class="hljs-built_in">meet</span>(<span class="hljs-built_in">demoness</span>(X-<span class="hljs-number">1</span>, Y), T) :- <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), <span class="hljs-built_in">demoness</span>(X-<span class="hljs-number">1</span>, Y).
+<span class="hljs-built_in">meet</span>(<span class="hljs-built_in">demoness</span>(X, Y+<span class="hljs-number">1</span>), T) :- <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), <span class="hljs-built_in">demoness</span>(X, Y+<span class="hljs-number">1</span>).
+<span class="hljs-built_in">meet</span>(<span class="hljs-built_in">demoness</span>(X, Y-<span class="hljs-number">1</span>), T) :- <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), <span class="hljs-built_in">demoness</span>(X, Y-<span class="hljs-number">1</span>).
+</code></pre><p><span>Lorsque le joueur se trouve à une cellule de différence, l’objectif achieved(T) est atteint.</span></p><h3 id="32-Choix-d’implémentation-et-structures-de-données" data-id="32-Choix-d’implémentation-et-structures-de-données"><a class="anchor hidden-xs" href="#32-Choix-d’implémentation-et-structures-de-données" title="32-Choix-d’implémentation-et-structures-de-données"><span class="octicon octicon-link"></span></a><span>3.2  Choix d’implémentation et structures de données</span></h3><p><span>Pour l’implémentation en ASP des différentes actions, nous les avons classées en différentes catégories.</span><br>
+<span>Voici les différentes actions que nous avons modélisées :</span></p><pre><code class="asp hljs"><span class="hljs-comment">%%% GENERATION OF ACTIONS</span>
+<span class="hljs-comment">% list of possible actions</span>
+action(up; down; left; right).
+action(hurt);
+action(push_block_up; push_block_down; push_block_left; push_block_right).
+action(push_mob_up; push_mob_down; push_mob_left; push_mob_right).
+action(nop).
+<span class="hljs-comment">% generation</span>
+{do(<span class="hljs-symbol">A</span>, <span class="hljs-symbol">T</span>): action(<span class="hljs-symbol">A</span>)}=<span class="hljs-number">1</span> :- step(<span class="hljs-symbol">T</span>).
+</code></pre><h4 id="321-Frame-problem" data-id="321-Frame-problem"><a class="anchor hidden-xs" href="#321-Frame-problem" title="321-Frame-problem"><span class="octicon octicon-link"></span></a><span>3.2.1 Frame problem</span></h4><p><span>Les fluents évoluent au fur et à mesure du temps. Certains changent de place mais la majorité demeurent au même endroit entre deux pas de temps. Nous avons donc implémenté une fonction </span><em><span>removed</span></em><span> :</span></p><pre><code class="asp hljs"><span class="hljs-operator">%%</span>% FRAME PROBLEM
+fluent<span class="hljs-punctuation">(</span><span class="hljs-built_in">F</span><span class="hljs-punctuation">,</span> <span class="hljs-built_in">T</span><span class="hljs-operator">+</span><span class="hljs-number">1</span><span class="hljs-punctuation">)</span> <span class="hljs-operator">:</span><span class="hljs-operator">-</span> fluent<span class="hljs-punctuation">(</span><span class="hljs-built_in">F</span><span class="hljs-punctuation">,</span> <span class="hljs-built_in">T</span><span class="hljs-punctuation">)</span><span class="hljs-punctuation">,</span> <span class="hljs-built_in">T</span><span class="hljs-operator">+</span><span class="hljs-number">1</span> <span class="hljs-operator">&lt;</span> horizon<span class="hljs-punctuation">,</span> not removed<span class="hljs-punctuation">(</span><span class="hljs-built_in">F</span><span class="hljs-punctuation">,</span> <span class="hljs-built_in">T</span><span class="hljs-punctuation">)</span>.
+</code></pre><h4 id="322-Les-déplacements-du-joueur" data-id="322-Les-déplacements-du-joueur"><a class="anchor hidden-xs" href="#322-Les-déplacements-du-joueur" title="322-Les-déplacements-du-joueur"><span class="octicon octicon-link"></span></a><span>3.2.2 Les déplacements du joueur</span></h4><p><span>Le joueur peut se déplacer de gauche à droite et de bas en haut. Il peut aussi pousser des monstres ou des blocs qui se trouvent sur son passage.</span></p><blockquote>
+<p><span>Exemple : Aller à droite</span></p>
+</blockquote><pre><code class="asp hljs">%%% ACTION: right
+% precondition
+:- <span class="hljs-built_in">do</span>(right, T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), not <span class="hljs-built_in">cell</span>(X, Y+<span class="hljs-number">1</span>).
+:- <span class="hljs-built_in">do</span>(right, T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">block</span>(X, Y+<span class="hljs-number">1</span>), T).
+:- <span class="hljs-built_in">do</span>(right, T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">mob</span>(X, Y+<span class="hljs-number">1</span>), T).
+% effect
+<span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y+<span class="hljs-number">1</span>), T+<span class="hljs-number">1</span>) :- <span class="hljs-built_in">do</span>(right, T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T).
+<span class="hljs-built_in">removed</span>(<span class="hljs-built_in">at</span>(X, Y), T) :- <span class="hljs-built_in">do</span>(right, T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T).
+</code></pre><h4 id="323-Se-blesser-déplacement-sur-un-pic" data-id="323-Se-blesser-déplacement-sur-un-pic"><a class="anchor hidden-xs" href="#323-Se-blesser-déplacement-sur-un-pic" title="323-Se-blesser-déplacement-sur-un-pic"><span class="octicon octicon-link"></span></a><span>3.2.3 Se blesser (déplacement sur un pic)</span></h4><p><span>Sur son chemin le joueur peut rencontrer des pics, il en existe deux types :</span></p><ul>
+<li><span>Les pics statiques</span><br>
+<span>Ces pics n’évoluent pas avec le temps, lorsque le joueur avance sur un pic de ce type, il perd un déplacement.</span></li>
+<li><span>Les pics ouverts/fermés (pièges)</span><br>
+<span>Ces pics s’ouvrent et se ferment en fonction du nombre de déplacements du joueur. A chaque déplacement leurs états sont modifiés, ils passent de </span><strong><span>safe</span></strong><span> (cellule classique) à </span><strong><span>unsafe</span></strong><span> (pic statique).</span></li>
+</ul><blockquote>
+<p><span>Il existe une subtilité : si le joueur se blesse, alors l’état du joueur et des pièges restent inchangés bien qu’il s’écoule un pas de temps.</span></p>
+</blockquote><blockquote>
+<p><span>Important : le joueur ne peut pas se blesser deux tours de suite.</span></p>
+</blockquote><p><span>Pour modéliser cela, nous avons créé une action </span><strong><span>hurt</span></strong><span> regroupant les deux types de pics :</span></p><pre><code class="asp hljs"><span class="hljs-comment">%%% ACTION: hurt</span>
+<span class="hljs-comment">% generation</span>
+fluent(spike(X, Y), T) :- fluent(trap(X, Y), T, unsafe). <span class="hljs-comment">% unsafe trap is equivalent to spike</span>
+removed(spike(X, Y), T) :- fluent(trap(X, Y), T, unsafe). <span class="hljs-comment">% prevent non-desired apparition of spike</span>
+fluent(trap(X, Y), T+<span class="hljs-number">1</span>, safe) :- fluent(trap(X, Y), T, unsafe), do(A, T), A !<span class="hljs-built_in">=</span> hurt. <span class="hljs-comment">% safe trap become unsafe if action different from hurt</span>
+fluent(trap(X, Y), T+<span class="hljs-number">1</span>, unsafe) :- fluent(trap(X, Y), T, safe), do(A, T), A !<span class="hljs-built_in">=</span> hurt. <span class="hljs-comment">% unsafe trap become safe if action different from hurt</span>
+fluent(trap(X, Y), T+<span class="hljs-number">1</span>, unsafe) :- fluent(trap(X, Y), T, unsafe), do(A, T), A <span class="hljs-built_in">=</span> hurt. <span class="hljs-comment">% unsafe trap stay unsafe if hurt</span>
+fluent(trap(X, Y), T+<span class="hljs-number">1</span>, safe) :- fluent(trap(X, Y), T, safe), do(A, T), A <span class="hljs-built_in">=</span> hurt. <span class="hljs-comment">% safe trap stay safe if hurt</span>
+<span class="hljs-comment">% precondition</span>
+:- fluent(at(X, Y), T), fluent(spike(X, Y), T), <span class="hljs-built_in">not</span> do(hurt, T-<span class="hljs-number">1</span>), <span class="hljs-built_in">not</span> do(hurt, T). <span class="hljs-comment">% forced to hurt if on spike and not hurt the turn before</span>
+:- do(hurt, T-<span class="hljs-number">1</span>), do(hurt, T). <span class="hljs-comment">% can't hurt two turn in a row</span>
+:- do(hurt, T), fluent(at(X, Y), T), <span class="hljs-built_in">not</span> fluent(spike(X, Y), T). <span class="hljs-comment">% can't hurt if not on spike</span>
+</code></pre><h4 id="324-Récupération-de-clé" data-id="324-Récupération-de-clé"><a class="anchor hidden-xs" href="#324-Récupération-de-clé" title="324-Récupération-de-clé"><span class="octicon octicon-link"></span></a><span>3.2.4 Récupération de clé</span></h4><p><span>Dans certains niveaux, le joueur doit récupérer une clé pour ouvrir une porte est atteindre son objectif.</span></p><p><span>Pour modéliser cela,</span></p><pre><code class="asp hljs">%%% LOCK AND KEY
+% condition of lock
+:- <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">lock</span>(X, Y), T), not <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">have</span>(key), T).
+% effect of key
+<span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">have</span>(key), T) :- <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), <span class="hljs-built_in">key</span>(X, Y).
+<span class="hljs-built_in">removed</span>(<span class="hljs-built_in">lock</span>(X, Y), T) :- <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">lock</span>(X, Y), T).
+</code></pre><h4 id="325-Pousser-un-monstre" data-id="325-Pousser-un-monstre"><a class="anchor hidden-xs" href="#325-Pousser-un-monstre" title="325-Pousser-un-monstre"><span class="octicon octicon-link"></span></a><span>3.2.5 Pousser un monstre</span></h4><p><span>Nous avons regroupé différentes actions de la modélisation en STRIPS en une seule action.</span><br>
+<span>En effet, le fait de tuer ou non un monstre est géré en fonction de la position du monstre une fois poussé. Le monstre change donc de la place dans tous les cas, mais peut ne pas survivre à ce déplacement.</span></p><pre><code class="asp hljs">%%% ACTION: push_mob_up
+% precondition
+:- <span class="hljs-built_in">do</span>(push_mob_up, T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), not <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">mob</span>(X-<span class="hljs-number">1</span>, Y), T).
+% effect
+<span class="hljs-built_in">removed</span>(<span class="hljs-built_in">mob</span>(X-<span class="hljs-number">1</span>, Y), T) :- <span class="hljs-built_in">do</span>(push_mob_up, T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T).
+<span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">mob</span>(X-<span class="hljs-number">2</span>, Y), T) :- <span class="hljs-built_in">do</span>(push_mob_up, T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T).
+</code></pre><h4 id="326-Mort-d’un-monstre" data-id="326-Mort-d’un-monstre"><a class="anchor hidden-xs" href="#326-Mort-d’un-monstre" title="326-Mort-d’un-monstre"><span class="octicon octicon-link"></span></a><span>3.2.6 Mort d’un monstre</span></h4><p><span>Comme expliqué dans le STRIPS, il existe différentes manières de tuer un monstre.</span><br>
+<span>L’implémentation est simple à l’aide de la fonction removed :</span></p><pre><code class="asp hljs">%%% DEATH OF MOBS
+removed(mob(X, Y), T) :- <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">mob</span>(X, Y), T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">spike</span>(X, Y), T+<span class="hljs-number">1</span>).
+<span class="hljs-built_in">removed</span>(<span class="hljs-built_in">mob</span>(X, Y), T) :- <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">mob</span>(X, Y), T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">block</span>(X, Y), T).
+<span class="hljs-built_in">removed</span>(<span class="hljs-built_in">mob</span>(X, Y), T) :- <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">mob</span>(X, Y), T), not <span class="hljs-built_in">cell</span>(X, Y).
+</code></pre><h4 id="326-Pousser-un-block" data-id="326-Pousser-un-block"><a class="anchor hidden-xs" href="#326-Pousser-un-block" title="326-Pousser-un-block"><span class="octicon octicon-link"></span></a><span>3.2.6 Pousser un block</span></h4><p><span>On peut pousser si on est à côté d’un bloc, mais l’évolution de sa position dépend de ce qu’il y a derrière.</span></p><pre><code class="asp hljs">%%% ACTION: push_block_down
+% precondition
+:- <span class="hljs-built_in">do</span>(push_block_down, T), <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), not <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">block</span>(X+<span class="hljs-number">1</span>, Y), T).
+
+% effects
+<span class="hljs-built_in">removed</span>(<span class="hljs-built_in">block</span>(X+<span class="hljs-number">1</span>, Y), T) :-
+    <span class="hljs-built_in">do</span>(push_block_down, T),
+    <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T),
+    <span class="hljs-built_in">cell</span>(X+<span class="hljs-number">2</span>, Y),
+    not <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">block</span>(X+<span class="hljs-number">2</span>, Y), T),
+    not <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">mob</span>(X+<span class="hljs-number">2</span>, Y), T),
+    not <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">lock</span>(X+<span class="hljs-number">2</span>, Y), T),
+    not <span class="hljs-built_in">demoness</span>(X+<span class="hljs-number">2</span>, Y).
+    
+<span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">block</span>(X+<span class="hljs-number">2</span>, Y), T+<span class="hljs-number">1</span>) :- 
+    <span class="hljs-built_in">do</span>(push_block_down, T), 
+    <span class="hljs-built_in">fluent</span>(<span class="hljs-built_in">at</span>(X, Y), T), 
+    <span class="hljs-built_in">removed</span>(<span class="hljs-built_in">block</span>(X+<span class="hljs-number">1</span>, Y), T).
+</code></pre><h4 id="327-Ne-rien-faire…" data-id="327-Ne-rien-faire…"><a class="anchor hidden-xs" href="#327-Ne-rien-faire…" title="327-Ne-rien-faire…"><span class="octicon octicon-link"></span></a><span>3.2.7 Ne rien faire…</span></h4><p><span>Une fois l’objectif atteint, le héros n’a plus rien à faire (si ce n’est répondre aux questions de la femme démon dans le vrai jeu).</span></p><pre><code>%%% ACTION: nop
+% only possible action when finished is nop
+:- achieved(T), do(A, T), A != nop. 
+% but 'nop' can only be done after finishing
+:- do(nop, T), not achieved(T). 
+</code></pre><h3 id="33-Expérimentations-pratiques" data-id="33-Expérimentations-pratiques"><a class="anchor hidden-xs" href="#33-Expérimentations-pratiques" title="33-Expérimentations-pratiques"><span class="octicon octicon-link"></span></a><span>3.3  Expérimentations pratiques</span></h3><p><span>En utilisant </span><strong><span>python</span></strong><span>, nous avons implémenté la génération aumatique des prédicats et fluents à partir d’une carte décrite en fichier texte.</span><br>
+<span>Les régles sont stockées dans un simple </span><em><span>string</span></em><span>, et le tout est confié au module clingo assurant le grounding et la résolution.</span></p><h4 id="331-Tests-des-solutions" data-id="331-Tests-des-solutions"><a class="anchor hidden-xs" href="#331-Tests-des-solutions" title="331-Tests-des-solutions"><span class="octicon octicon-link"></span></a><span>3.3.1 Tests des solutions</span></h4><p><span>Le modèle donné par clingo est converti en suite d’instructions (haut, bas, gauche, droite) correspondant aux touches du clavier à presser afin de compléter le niveau.</span><br>
+<span>Nous avons donc pu tester la suite d’instructions donnée par le solveur et elle s’est avérée correcte à chaque fois.</span></p><h4 id="Nombre-de-solution-par-niveau" data-id="Nombre-de-solution-par-niveau"><a class="anchor hidden-xs" href="#Nombre-de-solution-par-niveau" title="Nombre-de-solution-par-niveau"><span class="octicon octicon-link"></span></a><span>Nombre de solution par niveau</span></h4><table>
+<thead>
+<tr>
+<th><span>Niveau</span></th>
+<th><span>Nombre de solutions</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>level 1</span></td>
+<td><span>8</span></td>
+</tr>
+<tr>
+<td><span>level 2</span></td>
+<td><span>3</span></td>
+</tr>
+<tr>
+<td><span>level 3</span></td>
+<td><span>1</span></td>
+</tr>
+<tr>
+<td><span>level 4</span></td>
+<td><span>2</span></td>
+</tr>
+<tr>
+<td><span>level 5</span></td>
+<td><span>26</span></td>
+</tr>
+<tr>
+<td><span>level 6</span></td>
+<td><span>39</span></td>
+</tr>
+<tr>
+<td><span>level 7</span></td>
+<td><span>2</span></td>
+</tr>
+<tr>
+<td><span>level 8</span></td>
+<td><span>4</span></td>
+</tr>
+<tr>
+<td><span>level 9</span></td>
+<td><span>2</span></td>
+</tr>
+</tbody>
+</table><blockquote>
+<p><span>Les niveaux 5 et 6 comportent autant de solution car ils sont résolvables en une action de moins que demandé, et qu’il existe beaucoup de manières différentes de perdre un pas de temps.</span></p>
+</blockquote><blockquote>
+<p><span>Le niveau 9 est le plus difficile notamment car il n’a que 2 deux solutions pour 43 pas de temps</span></p>
+</blockquote><h4 id="332-Temps-de-résolution" data-id="332-Temps-de-résolution"><a class="anchor hidden-xs" href="#332-Temps-de-résolution" title="332-Temps-de-résolution"><span class="octicon octicon-link"></span></a><span>3.3.2 Temps de résolution</span></h4><p><span>Nous avons mesuré les temps de résolution des différents niveaux, pour une seule solution.</span></p><blockquote>
+<p><span>Les mesures ont réalisées sur un laptop Lenovo Yoga Slim 7 (branché) doté d’un processeur AMD Ryzen 7 4700U.</span></p>
+</blockquote><table>
+<thead>
+<tr>
+<th><span>Niveau</span></th>
+<th><span>Temps d’exécution</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>level 1</span></td>
+<td><span>0m0,717s</span></td>
+</tr>
+<tr>
+<td><span>level 2</span></td>
+<td><span>0m0,750s</span></td>
+</tr>
+<tr>
+<td><span>level 3</span></td>
+<td><span>0m2,082s</span></td>
+</tr>
+<tr>
+<td><span>level 4</span></td>
+<td><span>0m0,771s</span></td>
+</tr>
+<tr>
+<td><span>level 5</span></td>
+<td><span>0m0,662s</span></td>
+</tr>
+<tr>
+<td><span>level 6</span></td>
+<td><span>0m15,219s</span></td>
+</tr>
+<tr>
+<td><span>level 7</span></td>
+<td><span>0m7,317s</span></td>
+</tr>
+<tr>
+<td><span>level 8</span></td>
+<td><span>0m0,121s</span></td>
+</tr>
+<tr>
+<td><span>level 9</span></td>
+<td><span>0m4,100s</span></td>
+</tr>
+</tbody>
+</table><h2 id="4-Méthode-2--SATPLAN" data-id="4-Méthode-2--SATPLAN"><a class="anchor hidden-xs" href="#4-Méthode-2--SATPLAN" title="4-Méthode-2--SATPLAN"><span class="octicon octicon-link"></span></a><span>4. Méthode 2 : SATPLAN</span></h2><h3 id="41-Représentation-du-problème" data-id="41-Représentation-du-problème"><a class="anchor hidden-xs" href="#41-Représentation-du-problème" title="41-Représentation-du-problème"><span class="octicon octicon-link"></span></a><span>4.1  Représentation du problème</span></h3><h4 id="411-Le-vocabulaire-et-les-actions" data-id="411-Le-vocabulaire-et-les-actions"><a class="anchor hidden-xs" href="#411-Le-vocabulaire-et-les-actions" title="411-Le-vocabulaire-et-les-actions"><span class="octicon octicon-link"></span></a><span>4.1.1 Le vocabulaire et les actions</span></h4><p><span>Pour traduire la carte de caractères en variables compréhensibles par un solver SAT, nous avons établi le vocabulaire suivant :</span></p><table>
+<thead>
+<tr>
+<th><span>Nom</span></th>
+<th><span>Représentation</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>at((X,Y),T)</span></td>
+<td><span>la position du joueur sur le puzzle à l’instant T</span></td>
+</tr>
+<tr>
+<td><span>block((X,Y),T)</span></td>
+<td><span>la position des blocs sur le puzzle à l’instant T</span></td>
+</tr>
+<tr>
+<td><span>mob((X,Y),T)</span></td>
+<td><span>la position des monstres sur le puzzle à l’instant T</span></td>
+</tr>
+<tr>
+<td><span>spike((X,Y),T)</span></td>
+<td><span>la position des pics</span></td>
+</tr>
+<tr>
+<td><span>trap((X,Y),T)</span></td>
+<td><span>la position des pièges à l’instant T : vrai si inactivé, faux sinon.</span></td>
+</tr>
+<tr>
+<td><span>do(T, action)</span></td>
+<td><span>les actions du héros à l’instant T</span></td>
+</tr>
+<tr>
+<td><span>have_key(T)</span></td>
+<td><span>la possession de la clé : vrai si le héros possède la clé à l’instant T, faux sinon</span></td>
+</tr>
+<tr>
+<td><span>empty((X,Y),T)</span></td>
+<td><span>l’indication de si une case est “vide” : faux si non vide (bloc, mob, cadenas ou femme démon sur la case))</span></td>
+</tr>
+</tbody>
+</table><p><span>où :</span></p><ul>
+<li><span>T : Instant de temps compris entre 0 et T_MAX-1.</span></li>
+<li><span>action : Action du joueur parmi :</span></li>
+</ul><pre><code class="python hljs">ACTIONS = {<span class="hljs-string">"left"</span>, <span class="hljs-string">"right"</span>, <span class="hljs-string">"up"</span>, <span class="hljs-string">"down"</span>, <span class="hljs-string">"hurt"</span>, 
+           <span class="hljs-string">"push_block_left"</span>, <span class="hljs-string">"push_block_right"</span>, <span class="hljs-string">"push_block_up"</span>, <span class="hljs-string">"push_block_down"</span>, <span class="hljs-string">"push_mob_left"</span>,
+           <span class="hljs-string">"push_mob_right"</span>, <span class="hljs-string">"push_mob_up"</span>, <span class="hljs-string">"push_mob_down"</span>}
+</code></pre><blockquote>
+<p><span>Ce sont les mêmes actions qu’en ASP excépté que nous avons cette fois pas implémenté l’action “nop” de rien faire, de toute façon peu utile dans le jeu Helltaker.</span></p>
+</blockquote><p><span>Les coordonnées des cases en fonction de leur contenu sont préparées par la fonction </span><em><span>grid_to_coords_dict()</span></em><span>.</span></p><p><span>À chaque variable correpond un nombre unique afin de pouvoir écrire le dichier DIMACS.</span></p><blockquote>
+<p><span>Les fonctions </span><em><span>grid_to_coords_dict()</span></em><span> et </span><em><span>vocabulary()</span></em><span> construisant le vocabulaire sont données en annexe.</span></p>
+</blockquote><h3 id="42-Choix-d’implémentation-et-structures-de-données" data-id="42-Choix-d’implémentation-et-structures-de-données"><a class="anchor hidden-xs" href="#42-Choix-d’implémentation-et-structures-de-données" title="42-Choix-d’implémentation-et-structures-de-données"><span class="octicon octicon-link"></span></a><span>4.2  Choix d’implémentation et structures de données</span></h3><h4 id="421-Structures-des-données" data-id="421-Structures-des-données"><a class="anchor hidden-xs" href="#421-Structures-des-données" title="421-Structures-des-données"><span class="octicon octicon-link"></span></a><span>4.2.1 Structures des données</span></h4><p><span>Nous avons créé des alias de type afin de faciliter la compréhension du code python.</span></p><pre><code class="python hljs"><span class="hljs-comment"># alias de type</span>
+Grid = <span class="hljs-type">List</span>[<span class="hljs-type">List</span>[<span class="hljs-built_in">str</span>]]
+Variable = <span class="hljs-built_in">int</span>
+<span class="hljs-type">Literal</span> = <span class="hljs-built_in">int</span>
+Clause = <span class="hljs-type">List</span>[<span class="hljs-type">Literal</span>]
+Map = <span class="hljs-type">List</span>[<span class="hljs-type">List</span>[<span class="hljs-type">Literal</span>]]
+Coord = <span class="hljs-type">Tuple</span>[<span class="hljs-built_in">int</span>, <span class="hljs-built_in">int</span>]
+</code></pre><h4 id="422-Choix-d’implémentation" data-id="422-Choix-d’implémentation"><a class="anchor hidden-xs" href="#422-Choix-d’implémentation" title="422-Choix-d’implémentation"><span class="octicon octicon-link"></span></a><span>4.2.2 Choix d’implémentation</span></h4><p><span>La modélisation adopté se rapproche largement de celle implémentée en ASP.</span><br>
+<span>Cependant, il est nécessaire d’être plus explicite en SAT.</span></p><p><span>La difficulté de l’implémentation résidait surtout dans les clauses des pics et des pièges. Nous allons donc expliquer nos choix spécifiques d’implémentation pour ceux-là.</span></p><p><strong><span>Pics</span></strong></p><p><span>Pour représenter le fait que le héros perde un temps quand il tombe sur un pic, nous avons créé une action “hurt” :</span></p><blockquote>
+<p><span>Dans le même ordre que dans la fonction python </span><em><span>clauses_spikes()</span></em><span> donnée dans l’annexe</span></p>
+</blockquote><ul>
+<li><strong><span>1ère clause :</span></strong><br>
+<span>Le héros ne peut pas se blesser si il n’est pas sur un pic à l’instant T.</span><pre><code class="python hljs">at((X, Y), T) <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> spike((X, Y), T) -&gt; <span class="hljs-keyword">not</span> do(hurt, T)
+</code></pre>
+</li>
+<li><strong><span>2nde clause :</span></strong><br>
+<span>Le héros ne peut pas se blesser deux fois de suite</span><pre><code class="python hljs">do(hurt, T) -&gt; <span class="hljs-keyword">not</span> do(hurt, T+<span class="hljs-number">1</span>)
+</code></pre>
+</li>
+<li><strong><span>3ème clause :</span></strong><br>
+<span>Si le héros est sur un pic et qu’il ne s’est pas blessé au tour précédent, alors il se blesse.</span><pre><code class="python hljs">at((X, Y), T) <span class="hljs-keyword">and</span> spike((X, Y), T) <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> do(hurt, T-<span class="hljs-number">1</span>) -&gt; do(hurt, T)
+</code></pre>
+</li>
+</ul><p><span>Comme nous avions une clause pour l’unicité d’action parmi {“left”, “right”, …, “hurt”, …, “push_mob_down”}, le héros ne peut alors rien faire quand “hurt” est vrai.</span></p><p><strong><span>Pièges</span></strong></p><p><span>Les clauses des pièges ne modélisent pas directement les dégâts infligés au héros. Ces dégâts sont modélisés par les clauses des pics.</span><br>
+<span>Comme les pièges sont soit activés soit désactivés, il faut modéliser le fait qu’ils agissent comme des piques ou non.</span><br>
+<span>Il faut en plus modéliser le basculement activé / désactivé des pics. En effet, quand le héros est blessé, il perd un temps et donc il s’assure que les pics restent comme ils sont. Quand le héros n’est pas blessé, les pics passent d’activé à inactivé et vice-versa.</span></p><blockquote>
+<p><span>Dans le même ordre que dans la fonction python </span><em><span>clauses_traps()</span></em><span> donnée dans l’annexe</span></p>
+</blockquote><ul>
+<li><strong><span>1ère clause :</span></strong><br>
+<span>Si un piège est activé, alors c’est comme si nous avions un pic.</span></li>
+<li><strong><span>2nde clause :</span></strong><br>
+<span>Si un piège est inactivé, alors ce n’est pas un pic.</span></li>
+<li><strong><span>3ème clause :</span></strong><br>
+<span>Si “hurt” est vrai, alors un piège inactivé reste inactivé au temps suivant.</span></li>
+<li><strong><span>4ème clause :</span></strong><br>
+<span>Si “hurt” est vrai, alors un piège activé reste activé au temps suivant.</span></li>
+<li><strong><span>5ème clause :</span></strong><br>
+<span>Si “hurt” est faux, alors un piège inactivé devient activé au temps suivant.</span></li>
+<li><strong><span>6ème clause :</span></strong><br>
+<span>Si “hurt” est faux, alors un piège activé devient inactivé au temps suivant.</span></li>
+</ul><blockquote>
+<p><strong><span>Un certain nombre d’autres choix modélisation en SAT sont données en annexe, ou directement dans le code python </span><em><span>helltaker_sat_utils.py</span></em></strong></p>
+</blockquote><h3 id="43-Expérimentations-pratiques" data-id="43-Expérimentations-pratiques"><a class="anchor hidden-xs" href="#43-Expérimentations-pratiques" title="43-Expérimentations-pratiques"><span class="octicon octicon-link"></span></a><span>4.3  Expérimentations pratiques</span></h3><p><span>Nous avons pu mesurer les temps de résulotion en SAT pour différents solvers.</span></p><table>
+<thead>
+<tr>
+<th><span>Niveau</span></th>
+<th><span>Temps d’exécution GOPHERSAT</span></th>
+<th><span>Temps d’exécution GLUCOSE4</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>level 1</span></td>
+<td><span>0m3,737s</span></td>
+<td><span>0m3,621s</span></td>
+</tr>
+<tr>
+<td><span>level 2</span></td>
+<td><span>0m2,348s</span></td>
+<td><span>0m2,108s</span></td>
+</tr>
+<tr>
+<td><span>level 3</span></td>
+<td><span>0m4,564s</span></td>
+<td><span>0m2,731s</span></td>
+</tr>
+<tr>
+<td><span>level 4</span></td>
+<td><span>0m7,264s</span></td>
+<td><span>0m2,384s</span></td>
+</tr>
+<tr>
+<td><span>level 5</span></td>
+<td><span>0m3,116s</span></td>
+<td><span>0m1,675s</span></td>
+</tr>
+<tr>
+<td><span>level 6</span></td>
+<td><span>3m53,543s</span></td>
+<td><span>0m11,511s</span></td>
+</tr>
+<tr>
+<td><span>level 7</span></td>
+<td><span>0m41,325s</span></td>
+<td><span>0m3,467s</span></td>
+</tr>
+<tr>
+<td><span>level 8</span></td>
+<td><span>0m5,307s</span></td>
+<td><span>0m6,221s</span></td>
+</tr>
+<tr>
+<td><span>level 9</span></td>
+<td><span>5m23,017s</span></td>
+<td><span>0m11,176s</span></td>
+</tr>
+</tbody>
+</table><p><span>Nous constatons que les temps d’exécution sont plus courts avec le solver SAT GLUCOSE4 de la librairie python pySAT. Plus le niveau est complexe, plus la différence de temps est importante (niveaux 6 et 9 en particulier).</span></p><h3 id="44-Perspectives-d’amélioration" data-id="44-Perspectives-d’amélioration"><a class="anchor hidden-xs" href="#44-Perspectives-d’amélioration" title="44-Perspectives-d’amélioration"><span class="octicon octicon-link"></span></a><span>4.4  Perspectives d’amélioration</span></h3><p><span>La modélisation n’est pas optimale et pourrait être améliorée. On pourrait par exemple essayer de rajouter des variables pour que le solveur n’ait pas à faire la même déduction plusieurs fois de suite dans différentes clauses.</span></p><blockquote>
+<p><span>Pour la modélisation du niveau 9 en SAT, on dénombre 6753 variables et 611702 clauses.</span></p>
+</blockquote><p><span>De plus, certaines règles ou actions spécifiques n’ont pas été modélisées, comme par exemple :</span></p><ul>
+<li><span>Le fait de pouvoir pousser un bloc sur une case qui était un cadenas qu’on a ouvert</span></li>
+<li><span>La gestion de plusieurs cadenas et clés</span></li>
+<li><span>Le fait qu’on ne peut plus rien faire si on finit en un coup de moins</span></li>
+</ul><p><span>et d’autres tout aussi spécifiques.</span><br>
+<span>La modélisation adoptée permet tout de même de résoudre tous les problèmes du jeu (excépté le niveau 10).</span></p><h2 id="5-Comparaison-expérimentale-des-2-méthodes" data-id="5-Comparaison-expérimentale-des-2-méthodes"><a class="anchor hidden-xs" href="#5-Comparaison-expérimentale-des-2-méthodes" title="5-Comparaison-expérimentale-des-2-méthodes"><span class="octicon octicon-link"></span></a><span>5.  Comparaison expérimentale des 2 méthodes</span></h2><p><span>Pour comparer les méthodes SAT et ASP, nous avons pris les temps du Glucose4 pour SAT.</span></p><blockquote>
+<p><span>Les mesures ont réalisées sur un laptop Lenovo Yoga Slim 7 (branché) doté d’un processeur AMD Ryzen 7 4700U.</span></p>
+</blockquote><table>
+<thead>
+<tr>
+<th><span>Niveau</span></th>
+<th><span>Temps d’exécution  SAT</span></th>
+<th><span>Temps d’exécution  ASP</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>level 1</span></td>
+<td><span>0m3,621s</span></td>
+<td><span>0m0,717s</span></td>
+</tr>
+<tr>
+<td><span>level 2</span></td>
+<td><span>0m2,108s</span></td>
+<td><span>0m0,750s</span></td>
+</tr>
+<tr>
+<td><span>level 3</span></td>
+<td><span>0m2,731s</span></td>
+<td><span>0m2,082s</span></td>
+</tr>
+<tr>
+<td><span>level 4</span></td>
+<td><span>0m2,384s</span></td>
+<td><span>0m0,771s</span></td>
+</tr>
+<tr>
+<td><span>level 5</span></td>
+<td><span>0m1,675s</span></td>
+<td><span>0m0,662s</span></td>
+</tr>
+<tr>
+<td><span>level 6</span></td>
+<td><span>0m11,511s</span></td>
+<td><span>0m15,219s</span></td>
+</tr>
+<tr>
+<td><span>level 7</span></td>
+<td><span>0m3,467s</span></td>
+<td><span>0m7,317s</span></td>
+</tr>
+<tr>
+<td><span>level 8</span></td>
+<td><span>0m6,221s</span></td>
+<td><span>0m0,121s</span></td>
+</tr>
+<tr>
+<td><span>level 9</span></td>
+<td><span>0m11,176s</span></td>
+<td><span>0m4,100s</span></td>
+</tr>
+</tbody>
+</table><p><span>De manière générale, il est plus efficace de résoudre le jeu Helltaker en ASP. En outre, le langage ASP permet un programme plus court et plus lisible que le SAT, et est bien plus simple à appréhender.</span></p><p><span>On peut tout de même noter que sur le niveau avec le plus de pas de temps (43 pour le niveau 6), Glucose4 fait mieux que Clingo. Il semble donc meilleur pour les problèmes de plus grande taille.</span></p><h2 id="6-Annexes" data-id="6-Annexes"><a class="anchor hidden-xs" href="#6-Annexes" title="6-Annexes"><span class="octicon octicon-link"></span></a><span>6.  Annexes</span></h2><h3 id="61-STRIPS-complet" data-id="61-STRIPS-complet"><a class="anchor hidden-xs" href="#61-STRIPS-complet" title="61-STRIPS-complet"><span class="octicon octicon-link"></span></a><span>6.1 STRIPS complet</span></h3><h4 id="Action-de-déplacement" data-id="Action-de-déplacement"><a class="anchor hidden-xs" href="#Action-de-déplacement" title="Action-de-déplacement"><span class="octicon octicon-link"></span></a><strong><span>Action de déplacement</span></strong></h4><p><span>Simple action de déplacement d’une case à une autre vers la droite, la gauche, le haut, le bas.</span></p><pre><code>Action(move_right(X,Y))
+PRECOND :
+at (X, Y) ∧ ¬ wall (X, Y + 1) ∧ ¬ block (X, Y + 1) ∧ ¬ mob (X, Y + 1) ∧ ¬ lock (X, Y + 1) ∧ ¬ spikes (X, Y + 1)
+EFFECT :
+at (X, Y + 1) ∧ ¬ at(X, Y)
+
+Action(move_left(X,Y))
+PRECOND :
+at(X, Y) ∧ ¬ wall(X, Y - 1) ∧ ¬ block (X, Y - 1) ∧ ¬ mob (X, Y - 1) ∧ ¬ lock (X, Y - 1)
+EFFECT :
+at(X, Y - 1) ∧ ¬ at(X, Y)
+
+Action(move_top(X,Y))
+PRECOND :
+at(X, Y) ∧ ¬ wall(X + 1, Y) ∧ ¬ block (X + 1, Y) ∧ ¬ mob (X + 1, Y) ∧ ¬ lock (X + 1, Y)
+EFFECT :
+at(X + 1, Y) ∧ ¬ at(X, Y)
+
+Action(move_bottom(X,Y))
+PRECOND :
+at(X, Y) ∧ ¬ wall(X - 1, Y) ∧ ¬ block (X - 1, Y) ∧ ¬ mob (X - 1, Y) ∧ ¬ lock (X - 1, Y)
+EFFECT :
+at(X - 1, Y) ∧ ¬ at(X, Y)
+</code></pre><h4 id="Action-de-déplacement-sur-un-pic" data-id="Action-de-déplacement-sur-un-pic"><a class="anchor hidden-xs" href="#Action-de-déplacement-sur-un-pic" title="Action-de-déplacement-sur-un-pic"><span class="octicon octicon-link"></span></a><strong><span>Action de déplacement sur un pic</span></strong></h4><p><span>Lorsque le héros se déplace sur un pic.</span></p><pre><code>Action(move_right_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y + 1)
+EFFECT :
+at (X, Y + 1) ∧ ¬ at(X, Y) ∧ ¬ move(H)
+
+Action(move_left_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y - 1)
+EFFECT :
+at (X, Y - 1) ∧ ¬ at(X, Y) ∧ ¬ move(H)
+
+Action(move_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X + 1, Y)
+EFFECT :
+at (X + 1, Y) ∧ ¬ at(X, Y) ∧ ¬ move(X,Y)
+
+Action(move_bottom_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X - 1, Y)
+EFFECT :
+at (X - 1, Y) ∧ ¬ at(X, Y) ∧ ¬ move(X,Y)
+</code></pre><h4 id="Action-d’être-sur-un-pic" data-id="Action-d’être-sur-un-pic"><a class="anchor hidden-xs" href="#Action-d’être-sur-un-pic" title="Action-d’être-sur-un-pic"><span class="octicon octicon-link"></span></a><strong><span>Action d’être sur un pic</span></strong></h4><p><span>Effet lorsque le héros se trouve une un pic.</span></p><pre><code>Action(on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ ¬ move(X,Y)
+EFFECT :
+at (X, Y) ∧ move(X,Y)
+</code></pre><h4 id="Action-de-déplacement-dans-un-bloc-contre-un-mur" data-id="Action-de-déplacement-dans-un-bloc-contre-un-mur"><a class="anchor hidden-xs" href="#Action-de-déplacement-dans-un-bloc-contre-un-mur" title="Action-de-déplacement-dans-un-bloc-contre-un-mur"><span class="octicon octicon-link"></span></a><strong><span>Action de déplacement dans un bloc contre un mur</span></strong></h4><p><span>Action lorsque le héros se déplace dans un bloc qui est contre un  mur vers la droite, la gauche, le haut ou le bas.</span></p><pre><code>Action(move_right_into_block_wall(X,Y))
+PRECOND :
+at (X, Y )∧ block(X, Y + 1) ∧ wall (X, Y + 2)
+EFFECT :
+at(X, Y)
+
+Action(move_left_into_block_wall(X,Y))
+PRECOND :
+at (X, Y )∧ block(X, Y - 1) ∧ wall (X, Y - 2)
+EFFECT :
+at(X, Y)
+
+Action(move_top_into_block_wall(X,Y))
+PRECOND :
+at (X, Y )∧ block(X + 1, Y) ∧ wall (X + 2, Y)
+EFFECT :
+at(X, Y)
+
+Action(move_bottom_into_block_wall(X,Y))
+PRECOND :
+at (X, Y )∧ block(X - 1, Y) ∧ wall (X - 2, Y)
+EFFECT :
+at(X, Y)
+</code></pre><h4 id="Action-de-déplacement-dans-un-bloc-contre-un-bloc" data-id="Action-de-déplacement-dans-un-bloc-contre-un-bloc"><a class="anchor hidden-xs" href="#Action-de-déplacement-dans-un-bloc-contre-un-bloc" title="Action-de-déplacement-dans-un-bloc-contre-un-bloc"><span class="octicon octicon-link"></span></a><strong><span>Action de déplacement dans un bloc contre un bloc</span></strong></h4><p><span>Action lorsque le héros se déplace dans un bloc qui est contre un  autre bloc vers la droite, la gauche, le haut ou le bas.</span></p><pre><code>Action(move_right_into_block_block(X,Y))
+PRECOND :
+at (X, Y) ∧ block(X, Y + 1) ∧ block (X, Y + 2)
+EFFECT :
+at(X, Y)
+
+Action(move_left_into_block_block(X,Y))
+PRECOND :
+at (X, Y) ∧ block(X, Y - 1) ∧ block (X, Y - 2)
+EFFECT :
+at(X, Y)
+
+Action(move_top_into_block_block(X,Y))
+PRECOND :
+at (X, Y) ∧ block(X + 1, Y) ∧ block (X + 2, Y)
+EFFECT :
+at(X, Y)
+
+Action(move_bottom_into_block_block(X,Y))
+PRECOND :
+at (X, Y) ∧ block(X - 1, Y) ∧ block (X - 2, Y)
+EFFECT :
+at(X, Y)
+</code></pre><h4 id="Action-de-pousser-un-montre" data-id="Action-de-pousser-un-montre"><a class="anchor hidden-xs" href="#Action-de-pousser-un-montre" title="Action-de-pousser-un-montre"><span class="octicon octicon-link"></span></a><strong><span>Action de pousser un montre</span></strong></h4><p><span>Action lorsque le héros se déplace dans un monstre. Le monstre avance d’une case et le héros reste sur la même case.</span></p><pre><code>Action(push_monster_right(X,Y))
+PRECOND :
+at(X, Y) ∧ mob (X, Y + 1) ∧ ¬ wall(X, Y + 2) ∧ ¬ block (X, Y + 2) ∧ ¬ lock (X, Y + 2)
+EFFECT :
+at(X, Y) ∧ mob(X, Y + 2) ∧ ¬ mob(X, Y + 1)
+
+Action(push_monster_left(X,Y))
+PRECOND :
+at(X, Y) ∧ mob (X, Y - 1) ∧ ¬ wall(X, Y - 2) ∧ ¬ block (X, Y - 2) ∧ ¬ lock (X, Y - 2)
+EFFECT :
+at(X, Y) ∧ mob(X, Y - 2) ∧ ¬ mob(X, Y - 1)
+
+Action(push_monster_top(X,Y))
+PRECOND :
+at(X, Y) ∧ mob (X + 1, Y) ∧ ¬ wall(X + 2, Y) ∧ ¬ block (X + 2, Y) ∧ ¬ lock (X + 2, Y)
+EFFECT :
+at(X, Y) ∧ mob(X + 2, Y) ∧ ¬ mob(X + 1, Y)
+
+Action(push_monster_bottom(X,Y))
+PRECOND :
+at(X, Y) ∧ mob (X - 1, Y) ∧ ¬ wall(X - 2, Y) ∧ ¬ block (X - 2, Y) ∧ ¬ lock (X - 2, Y)
+EFFECT :
+at(X, Y) ∧ mob(X - 2, Y) ∧ ¬ mob(X - 1, Y)
+</code></pre><h4 id="Action-de-pousser-un-bloc" data-id="Action-de-pousser-un-bloc"><a class="anchor hidden-xs" href="#Action-de-pousser-un-bloc" title="Action-de-pousser-un-bloc"><span class="octicon octicon-link"></span></a><strong><span>Action de pousser un bloc</span></strong></h4><p><span>Action lorsque le héros se déplace dans un bloc. Le bloc avance d’une case et le héros reste sur la même case.</span></p><pre><code>Action(push_block_right(X,Y))
+PRECOND :
+at (X, Y) ∧ block (X, Y + 1) ∧ ¬ wall (X, Y + 2) ∧ ¬ mob (X, Y + 2) ∧ ¬ lock (X, Y + 2)
+EFFECT :
+at (X, Y) ∧ block (X, Y + 2) ∧ ¬ block (X, Y + 1)
+
+Action(push_block_left(X,Y))
+PRECOND :
+at (X, Y) ∧ block (X, Y - 1) ∧ ¬ wall (X, Y - 2) ∧ ¬ mob (X, Y - 2) ∧ ¬ lock (X, Y - 2)
+EFFECT :
+at (X, Y) ∧ block (X, Y - 2) ∧ ¬ block (X, Y - 1)
+
+Action(push_block_top(X,Y))
+PRECOND :
+at (X, Y) ∧ block (X + 1, Y) ∧ ¬ wall (X + 2, Y) ∧ ¬ mob (X + 2, Y) ∧ ¬ lock (X + 2, Y)
+EFFECT :
+at (X, Y) ∧ block (X + 2, Y) ∧ ¬ block (X + 1, Y)
+
+Action(push_block_bottom(X,Y))
+PRECOND :
+at (X, Y) ∧ block (X - 1, Y) ∧ ¬ wall (X - 2, Y) ∧ ¬ mob (X - 2, Y) ∧ ¬ lock (X - 2, Y)
+EFFECT :
+at (X, Y) ∧ block (X - 2, Y) ∧ ¬ block (X - 1, Y)
+</code></pre><h4 id="Action-de-tuer-un-monstre-dans-un-bloc" data-id="Action-de-tuer-un-monstre-dans-un-bloc"><a class="anchor hidden-xs" href="#Action-de-tuer-un-monstre-dans-un-bloc" title="Action-de-tuer-un-monstre-dans-un-bloc"><span class="octicon octicon-link"></span></a><strong><span>Action de tuer un monstre dans un bloc</span></strong></h4><p><span>Action lorsque le héros se déplace vers un monstre qui est à côté d’un bloc. Cette action ne fait pas bouger le héros mais détruit le monstre.</span></p><pre><code>Action(kill_right_block(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X, Y + 1) ∧ block (X, Y + 2)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X, Y + 1)
+
+Action(kill_left_block(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X, Y - 1) ∧ block (X, Y - 2)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X, Y - 1)
+  
+Action(kill_bottom_block(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X - 1, Y) ∧ block (X - 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X - 1, Y)
+
+Action(kill_top_block(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X + 1, Y) ∧ block (X + 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X + 1, Y)
+</code></pre><h4 id="Action-de-tuer-un-monstre-dans-un-mur" data-id="Action-de-tuer-un-monstre-dans-un-mur"><a class="anchor hidden-xs" href="#Action-de-tuer-un-monstre-dans-un-mur" title="Action-de-tuer-un-monstre-dans-un-mur"><span class="octicon octicon-link"></span></a><strong><span>Action de tuer un monstre dans un mur</span></strong></h4><p><span>Action lorsque le héros se déplace vers un monstre qui est à côté d’un mur. Cette action ne fait pas bouger le héros mais détruit le monstre.</span></p><pre><code>Action(kill_right_wall(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X, Y + 1) ∧ wall (X, Y + 2)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X, Y + 1)
+
+Action(kill_left_wall(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X, Y - 1) ∧ wall (X, Y - 2)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X, Y - 1)
+
+Action(kill_bottom_wall(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X - 1, Y) ∧ wall (X - 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X - 1, Y)
+ 
+Action(kill_top_wall(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X + 1, Y) ∧ wall (X + 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X + 1, Y)
+</code></pre><h4 id="Action-de-tuer-un-monstre-dans-un-pic" data-id="Action-de-tuer-un-monstre-dans-un-pic"><a class="anchor hidden-xs" href="#Action-de-tuer-un-monstre-dans-un-pic" title="Action-de-tuer-un-monstre-dans-un-pic"><span class="octicon octicon-link"></span></a><strong><span>Action de tuer un monstre dans un pic</span></strong></h4><p><span>Action lorsque le héros se déplace vers un monstre qui est à côté d’un pic. Cette action ne fait pas bouger le héros mais détruit le monstre.</span></p><pre><code>Action(kill_right_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X, Y + 1) ∧ spikes (X, Y + 2)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X, Y + 1)
+  
+Action(kill_left_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X, Y - 1) ∧ spikes (X, Y - 2)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X, Y - 1)
+
+Action(kill_bottom_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X - 1, Y) ∧ spikes (X - 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X - 1, Y)
+
+Action(kill_top_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X + 1, Y) ∧ spikes (X + 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X + 1, Y)
+</code></pre><h4 id="Action-de-tuer-un-monstre-dans-un-monstre" data-id="Action-de-tuer-un-monstre-dans-un-monstre"><a class="anchor hidden-xs" href="#Action-de-tuer-un-monstre-dans-un-monstre" title="Action-de-tuer-un-monstre-dans-un-monstre"><span class="octicon octicon-link"></span></a><strong><span>Action de tuer un monstre dans un monstre</span></strong></h4><p><span>Action lorsque le héros se déplace vers un monstre qui est à côté d’un monstre. Cette action ne fait pas bouger le héros mais détruit le monstre poussé par le héro.</span></p><pre><code>Action(kill_right_monster(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X, Y + 1) ∧ monster (X, Y + 2)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X, Y + 1)
+
+Action(kill_left_monster(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X, Y - 1) ∧ monster (X, Y - 2)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X, Y - 1)
+
+Action(kill_bottom_monster(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X - 1, Y) ∧ monster (X - 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X - 1, Y)
+  
+Action(kill_top_monster(X,Y))
+PRECOND :
+at (X, Y) ∧ mob (X + 1, Y) ∧ monster (X + 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ mob (X + 1, Y)
+</code></pre><h4 id="Action-d’aller-dans-un-bloc-contre-mur-et-qu’un-pic-s’ouvre" data-id="Action-d’aller-dans-un-bloc-contre-mur-et-qu’un-pic-s’ouvre"><a class="anchor hidden-xs" href="#Action-d’aller-dans-un-bloc-contre-mur-et-qu’un-pic-s’ouvre" title="Action-d’aller-dans-un-bloc-contre-mur-et-qu’un-pic-s’ouvre"><span class="octicon octicon-link"></span></a><strong><span>Action d’aller dans un bloc contre mur et qu’un pic s’ouvre</span></strong></h4><p><span>Action lorsque le héros se prend un bloc contre un mur et qu’il reste donc sur place mais qu’un pic s’ouvre.</span></p><pre><code>Action(move_block_wall_right_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ wall (X, Y + 1)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(move_block_wall_left_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ wall (X, Y - 1)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(move_block_wall_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ wall (X + 1, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(move_block_wall_bottom_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ wall (X - 1, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+</code></pre><h4 id="Action-d’aller-dans-un-bloc-contre-bloc-et-qu’un-pic-s’ouvre" data-id="Action-d’aller-dans-un-bloc-contre-bloc-et-qu’un-pic-s’ouvre"><a class="anchor hidden-xs" href="#Action-d’aller-dans-un-bloc-contre-bloc-et-qu’un-pic-s’ouvre" title="Action-d’aller-dans-un-bloc-contre-bloc-et-qu’un-pic-s’ouvre"><span class="octicon octicon-link"></span></a><strong><span>Action d’aller dans un bloc contre bloc et qu’un pic s’ouvre</span></strong></h4><p><span>Action lorsque le héros se prend un bloc contre un bloc et qu’il reste donc sur place mais qu’un pic s’ouvre.</span></p><pre><code>Action(move_block_block_right_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ block (X, Y + 1) ∧ block (X, Y + 2)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(move_block_block_left_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ block (X, Y - 1) ∧ block (X, Y - 2)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(move_block_block_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ block (X + 1, Y) ∧ block (X + 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(move_block_block_bottom_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ block (X - 1, Y) ∧ block (X - 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+</code></pre><h4 id="Action-de-pousser-un-bloc-et-qu’un-pic-s’ouvre" data-id="Action-de-pousser-un-bloc-et-qu’un-pic-s’ouvre"><a class="anchor hidden-xs" href="#Action-de-pousser-un-bloc-et-qu’un-pic-s’ouvre" title="Action-de-pousser-un-bloc-et-qu’un-pic-s’ouvre"><span class="octicon octicon-link"></span></a><strong><span>Action de pousser un bloc et qu’un pic s’ouvre</span></strong></h4><p><span>Action lorsque le héros pousse un bloc alors qu’il se trouve sur un pic qui s’ouvre.</span></p><pre><code>Action(push_block_right_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ block (X, Y + 1)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(push_block_left_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ block (X, Y - 1)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(push_block_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ block (X + 1, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(push_block_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ block (X - 1, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+</code></pre><h4 id="Action-de-pousser-un-monstre-et-qu’un-pic-s’ouvre" data-id="Action-de-pousser-un-monstre-et-qu’un-pic-s’ouvre"><a class="anchor hidden-xs" href="#Action-de-pousser-un-monstre-et-qu’un-pic-s’ouvre" title="Action-de-pousser-un-monstre-et-qu’un-pic-s’ouvre"><span class="octicon octicon-link"></span></a><strong><span>Action de pousser un monstre et qu’un pic s’ouvre</span></strong></h4><p><span>Action lorsque le héros se prends un bloc contre un mur et qu’il reste donc sur place mais qu’un pic s’ouvre.</span></p><pre><code>Action(push_monster_right_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X, Y + 1)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(push_monster_left_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X, Y - 1)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(push_monster_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X + 1, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+
+Action(push_monster_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X - 1, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y)
+</code></pre><h4 id="Action-de-tuer-un-monstre-contre-un-mur-et-qu’un-pic-s’ouvre" data-id="Action-de-tuer-un-monstre-contre-un-mur-et-qu’un-pic-s’ouvre"><a class="anchor hidden-xs" href="#Action-de-tuer-un-monstre-contre-un-mur-et-qu’un-pic-s’ouvre" title="Action-de-tuer-un-monstre-contre-un-mur-et-qu’un-pic-s’ouvre"><span class="octicon octicon-link"></span></a><strong><span>Action de tuer un monstre contre un mur et qu’un pic s’ouvre</span></strong></h4><p><span>Action lorsque le héros tue un monstre contre un mur alors qu’il se trouve sur un pic qui s’ouvre.</span></p><pre><code>Action(kill_monster_wall_right_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X, Y + 1) ∧ wall(X, Y + 2)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X,Y + 1)
+
+Action(kill_monster_wall_left_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X, Y - 1) ∧ wall(X, Y - 2)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X,Y - 1)
+
+Action(kill_monster_wall_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X + 1, Y) ∧ wall(X + 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X + 1,Y)
+
+Action(kill_monster_wall_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X - 1, Y) ∧ wall(X - 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X - 1,Y)
+</code></pre><h4 id="Action-de-tuer-un-monstre-contre-un-bloc-et-qu’un-pic-s’ouvre" data-id="Action-de-tuer-un-monstre-contre-un-bloc-et-qu’un-pic-s’ouvre"><a class="anchor hidden-xs" href="#Action-de-tuer-un-monstre-contre-un-bloc-et-qu’un-pic-s’ouvre" title="Action-de-tuer-un-monstre-contre-un-bloc-et-qu’un-pic-s’ouvre"><span class="octicon octicon-link"></span></a><strong><span>Action de tuer un monstre contre un bloc et qu’un pic s’ouvre</span></strong></h4><p><span>Action lorsque le héros tue un monstre contre un bloc alors qu’il se trouve sur un pic qui s’ouvre.</span></p><pre><code>Action(kill_monster_block_right_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X, Y + 1) ∧ block(X, Y + 2)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X,Y + 1)
+
+Action(kill_monster_block_left_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X, Y - 1) ∧ block(X, Y - 2)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X,Y - 1)
+
+Action(kill_monster_block_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X + 1, Y) ∧ block(X + 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X + 1,Y)
+
+Action(kill_monster_block_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X - 1, Y) ∧ block(X - 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X - 1,Y)
+</code></pre><h4 id="Action-de-tuer-un-monstre-contre-un-monstre-et-qu’un-pic-s’ouvre" data-id="Action-de-tuer-un-monstre-contre-un-monstre-et-qu’un-pic-s’ouvre"><a class="anchor hidden-xs" href="#Action-de-tuer-un-monstre-contre-un-monstre-et-qu’un-pic-s’ouvre" title="Action-de-tuer-un-monstre-contre-un-monstre-et-qu’un-pic-s’ouvre"><span class="octicon octicon-link"></span></a><strong><span>Action de tuer un monstre contre un monstre et qu’un pic s’ouvre</span></strong></h4><p><span>Action lorsque le héros tue un monstre contre un monstre alors qu’il se trouve sur un pic qui s’ouvre.</span></p><pre><code>Action(kill_monster_monster_right_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X, Y + 1) ∧ mob(X, Y + 2)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X,Y + 1)
+
+Action(kill_monster_monster_left_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X, Y - 1) ∧ mob(X, Y - 2)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X,Y - 1)
+
+Action(kill_monster_monster_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X + 1, Y) ∧ mob(X + 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X + 1,Y)
+
+Action(kill_monster_monster_top_on_spikes(X,Y))
+PRECOND :
+at (X, Y) ∧ spikes (X, Y) ∧ mob (X - 1, Y) ∧ mob(X - 2, Y)
+EFFECT :
+at (X, Y) ∧ ¬ move(X,Y) ∧ ¬ mob(X - 1,Y)
+</code></pre><h4 id="Action-de-tuer-un-montre-s’il-se-trouve-sur-un-pic-qui-s’ouvre" data-id="Action-de-tuer-un-montre-s’il-se-trouve-sur-un-pic-qui-s’ouvre"><a class="anchor hidden-xs" href="#Action-de-tuer-un-montre-s’il-se-trouve-sur-un-pic-qui-s’ouvre" title="Action-de-tuer-un-montre-s’il-se-trouve-sur-un-pic-qui-s’ouvre"><span class="octicon octicon-link"></span></a><strong><span>Action de tuer un montre s’il se trouve sur un pic qui s’ouvre</span></strong></h4><p><span>Si un monstre se trouve sur un pic, il disparaît.</span></p><pre><code>Action(monster_on_spikes(X,Y))
+PRECOND :
+mob (X, Y) ∧ spikes (X, Y)
+EFFECT :
+¬ mob(X,Y)
+</code></pre><h4 id="Action-de-marcher-sur-une-clé" data-id="Action-de-marcher-sur-une-clé"><a class="anchor hidden-xs" href="#Action-de-marcher-sur-une-clé" title="Action-de-marcher-sur-une-clé"><span class="octicon octicon-link"></span></a><strong><span>Action de marcher sur une clé</span></strong></h4><p><span>Action lorsque le héros se trouve sur la même cellule où se trouve une clé.</span></p><pre><code>Action(havekey())
+PRECOND :
+at (X, Y) ∧ key (X, Y)
+EFFECT :
+at (X, Y) ∧ have(key)
+</code></pre><h4 id="Action-d’ouvrir-une-porte" data-id="Action-d’ouvrir-une-porte"><a class="anchor hidden-xs" href="#Action-d’ouvrir-une-porte" title="Action-d’ouvrir-une-porte"><span class="octicon octicon-link"></span></a><strong><span>Action d’ouvrir une porte</span></strong></h4><p><span>Action lorsque le héros se déplace sur une porte et qu’il a une clé.</span><br>
+<span>La porte disparaît par la suite et le joueur avance.</span></p><pre><code>Action(unlock_right(X,Y))
+PRECOND :
+at (X, Y) ∧ door(X,Y+1) ∧ have(key)
+EFFECT :
+at (X, Y+1) ∧ ¬ have(key) ∧ ¬ door(X,Y+1)
+
+Action(unlock_left(X,Y))
+PRECOND :
+at (X,Y) ∧ door(X,Y-1) ∧ have(key)
+EFFECT :
+at (X,Y-1) ∧ ¬ have(key) ∧ ¬ door(X,Y-1)
+
+Action(unlock_top(X,Y))
+PRECOND :
+at (X,Y) ∧ door(X+1,Y) ∧ have(key)
+EFFECT :
+at (X+1,Y) ∧ ¬ have(key) ∧ ¬ door(X+1,Y)
+
+Action(unlock_bottom(X,Y))
+PRECOND :
+at (X,Y) ∧ door(X-1,Y) ∧ have(key)
+EFFECT :
+at (X-1,Y) ∧ ¬ have(key) ∧ ¬ door(X-1,Y)
+</code></pre><h4 id="Action-d’avancer-dans-une-porte-sans-clé" data-id="Action-d’avancer-dans-une-porte-sans-clé"><a class="anchor hidden-xs" href="#Action-d’avancer-dans-une-porte-sans-clé" title="Action-d’avancer-dans-une-porte-sans-clé"><span class="octicon octicon-link"></span></a><strong><span>Action d’avancer dans une porte sans clé</span></strong></h4><p><span>Action lorsque le héros se déplace sur une porte mais qu’il n’a pas de clé.</span><br>
+<span>Il reste sur place.</span></p><pre><code>Action(lock_right(X,Y))
+PRECOND :
+at (X, Y) ∧ door(X,Y+1) ∧ ¬ have(key)
+EFFECT :
+at (X, Y)
+
+Action(lock_left(X,Y))
+PRECOND :
+at (X,Y) ∧ door(X,Y-1) ∧ ¬ have(key)
+EFFECT :
+at (X, Y)
+
+Action(lock_top(X,Y))
+PRECOND :
+at (X,Y) ∧ door(X+1,Y) ∧ ¬ have(key)
+EFFECT :
+at (X, Y)
+
+Action(lock_bottom(X,Y))
+PRECOND :
+at (X,Y) ∧ door(X-1,Y) ∧ ¬ have(key)
+EFFECT :
+at (X, Y)
+</code></pre><h3 id="62-Fonctions-Python-du-solveur-SAT" data-id="62-Fonctions-Python-du-solveur-SAT"><a class="anchor hidden-xs" href="#62-Fonctions-Python-du-solveur-SAT" title="62-Fonctions-Python-du-solveur-SAT"><span class="octicon octicon-link"></span></a><span>6.2 Fonctions Python du solveur SAT</span></h3><h4 id="Fonctions-pour-le-vocabulaire" data-id="Fonctions-pour-le-vocabulaire"><a class="anchor hidden-xs" href="#Fonctions-pour-le-vocabulaire" title="Fonctions-pour-le-vocabulaire"><span class="octicon octicon-link"></span></a><span>Fonctions pour le vocabulaire</span></h4><pre><code class="python hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-keyword">def</span> <span class="hljs-title function_">grid_to_coords_dict</span>(<span class="hljs-params">grid: Grid</span>) -&gt; <span class="hljs-built_in">dict</span>:
+    <span class="hljs-string">"""
+    :param grid: grid of the level
+    :return: dict containing position of each element
+    """</span>
+    coords = {
+        <span class="hljs-string">"cells"</span>: [],
+        <span class="hljs-string">"empty"</span>: [],
+        <span class="hljs-string">"hero"</span>: [],
+        <span class="hljs-string">"demonesses"</span>: [],
+        <span class="hljs-string">"key"</span>: [],
+        <span class="hljs-string">"lock"</span>: [],
+        <span class="hljs-string">"spikes"</span>: [],
+        <span class="hljs-string">"traps_safe"</span>: [],
+        <span class="hljs-string">"traps_unsafe"</span>: [],
+        <span class="hljs-string">"blocks"</span>: [],
+        <span class="hljs-string">"mobs"</span>: [],
+    }
+
+    <span class="hljs-keyword">for</span> i, line <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(grid):
+        <span class="hljs-keyword">for</span> j, cell <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(line):
+            <span class="hljs-keyword">if</span> cell != <span class="hljs-string">"#"</span>:
+                coords[<span class="hljs-string">"cells"</span>].append((i, j))
+            <span class="hljs-keyword">if</span> cell <span class="hljs-keyword">in</span> [<span class="hljs-string">"S"</span>, <span class="hljs-string">" "</span>, <span class="hljs-string">"T"</span>, <span class="hljs-string">"U"</span>, <span class="hljs-string">"K"</span>]:
+                coords[<span class="hljs-string">"empty"</span>].append((i, j))
+            <span class="hljs-keyword">if</span> cell == <span class="hljs-string">"H"</span>:
+                coords[<span class="hljs-string">"hero"</span>].append((i, j))
+            <span class="hljs-keyword">elif</span> cell == <span class="hljs-string">"D"</span>:
+                coords[<span class="hljs-string">"demonesses"</span>].append((i, j))
+            <span class="hljs-keyword">elif</span> cell == <span class="hljs-string">"K"</span>:
+                coords[<span class="hljs-string">"key"</span>].append((i, j))
+            <span class="hljs-keyword">elif</span> cell == <span class="hljs-string">"L"</span>:
+                coords[<span class="hljs-string">"lock"</span>].append((i, j))
+            <span class="hljs-keyword">elif</span> cell == <span class="hljs-string">"S"</span>:
+                coords[<span class="hljs-string">"spikes"</span>].append((i, j))
+            <span class="hljs-keyword">elif</span> cell == <span class="hljs-string">"T"</span>:
+                coords[<span class="hljs-string">"traps_safe"</span>].append((i, j))
+            <span class="hljs-keyword">elif</span> cell == <span class="hljs-string">"U"</span>:
+                coords[<span class="hljs-string">"traps_unsafe"</span>].append((i, j))
+            <span class="hljs-keyword">elif</span> cell == <span class="hljs-string">"B"</span>:
+                coords[<span class="hljs-string">"blocks"</span>].append((i, j))
+            <span class="hljs-keyword">elif</span> cell == <span class="hljs-string">"M"</span>:
+                coords[<span class="hljs-string">"mobs"</span>].append((i, j))
+            <span class="hljs-keyword">elif</span> cell == <span class="hljs-string">"O"</span>:
+                coords[<span class="hljs-string">"blocks"</span>].append((i, j))
+                coords[<span class="hljs-string">"spikes"</span>].append((i, j))
+            <span class="hljs-keyword">elif</span> cell == <span class="hljs-string">"P"</span>:
+                coords[<span class="hljs-string">"blocks"</span>].append((i, j))
+                coords[<span class="hljs-string">"traps_safe"</span>].append((i, j))
+            <span class="hljs-keyword">elif</span> cell == <span class="hljs-string">"Q"</span>:
+                coords[<span class="hljs-string">"blocks"</span>].append((i, j))
+                coords[<span class="hljs-string">"traps_unsafe"</span>].append((i, j))
+
+    <span class="hljs-keyword">return</span> coords
+
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">vocabulary</span>(<span class="hljs-params">coords: <span class="hljs-built_in">dict</span>, t_max: <span class="hljs-built_in">int</span></span>) -&gt; <span class="hljs-built_in">dict</span>:
+    <span class="hljs-string">"""
+    :param coords: dict containing coord of each element of the map
+    :param t_max: horizon
+    :return: dict containing all the vocabulary
+    """</span>
+    cells = coords[<span class="hljs-string">"cells"</span>]
+    traps = coords[<span class="hljs-string">"traps_unsafe"</span>] + coords[<span class="hljs-string">"traps_safe"</span>]
+
+    act_vars = [(<span class="hljs-string">"do"</span>, t, a) <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max) <span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> ACTIONS]
+    at_vars = [(<span class="hljs-string">"at"</span>, t, c) <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max + <span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> cells]
+    spike_vars = [(<span class="hljs-string">"spike"</span>, t, c) <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max + <span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> cells]
+    traps_vars = [(<span class="hljs-string">"trap"</span>, t, c) <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max + <span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> traps]
+    have_key_vars = [(<span class="hljs-string">"have_key"</span>, t) <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max + <span class="hljs-number">1</span>)]
+    empty_cell_vars = [(<span class="hljs-string">"empty"</span>, t, c) <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max + <span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> cells]
+    block_vars = [(<span class="hljs-string">"block"</span>, t, c) <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max + <span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> cells]
+    mob_vars = [(<span class="hljs-string">"mob"</span>, t, c) <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max + <span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> cells]
+
+    <span class="hljs-keyword">return</span> {
+        v: i + <span class="hljs-number">1</span>
+        <span class="hljs-keyword">for</span> i, v <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(
+            act_vars
+            + at_vars
+            + spike_vars
+            + traps_vars
+            + have_key_vars
+            + block_vars
+            + empty_cell_vars
+            + mob_vars
+        )
+    }
+
+</div></div></code></pre><h4 id="Fonction-level_data_to_clauses" data-id="Fonction-level_data_to_clauses"><a class="anchor hidden-xs" href="#Fonction-level_data_to_clauses" title="Fonction-level_data_to_clauses"><span class="octicon octicon-link"></span></a><span>Fonction level_data_to_clauses</span></h4><pre><code class="python hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-keyword">def</span> <span class="hljs-title function_">level_data_to_clauses</span>(<span class="hljs-params">data: <span class="hljs-built_in">dict</span></span>) -&gt; <span class="hljs-type">Tuple</span>[<span class="hljs-built_in">dict</span>, <span class="hljs-type">List</span>[Clause]]:
+    <span class="hljs-string">"""
+    :param data: dict containing all level data
+    :return: all clauses corresponding to the level
+    """</span>
+    coords = grid_to_coords_dict(data[<span class="hljs-string">"grid"</span>])
+    t_max = data[<span class="hljs-string">"max_steps"</span>]
+    var2n = vocabulary(coords, t_max)
+
+    clauses = clauses_exactly_one_action(var2n, t_max) + clauses_initial_state(
+        var2n, coords, t_max
+    )
+
+    <span class="hljs-keyword">for</span> cell <span class="hljs-keyword">in</span> coords[<span class="hljs-string">"cells"</span>]:
+        clauses += clauses_successor_from_given_position(
+            var2n, coords[<span class="hljs-string">"cells"</span>], t_max, cell
+        )
+        clauses += clauses_spikes(var2n, t_max, cell)
+        clauses += clauses_empty(var2n, t_max, cell)
+        clauses += clauses_blocks(var2n, t_max, coords[<span class="hljs-string">"cells"</span>], cell)
+        clauses += clauses_mobs(var2n, t_max, coords[<span class="hljs-string">"cells"</span>], cell)
+
+    <span class="hljs-keyword">for</span> cell <span class="hljs-keyword">in</span> coords[<span class="hljs-string">"cells"</span>]:
+        <span class="hljs-keyword">if</span> cell <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> coords[<span class="hljs-string">"lock"</span>] + coords[<span class="hljs-string">"demonesses"</span>]:
+            clauses += clauses_empty(var2n, t_max, cell)
+
+    <span class="hljs-keyword">for</span> cell <span class="hljs-keyword">in</span> coords[<span class="hljs-string">"traps_unsafe"</span>] + coords[<span class="hljs-string">"traps_safe"</span>]:
+        clauses += clauses_traps(var2n, t_max, cell)
+
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(coords[<span class="hljs-string">"lock"</span>]) &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">len</span>(coords[<span class="hljs-string">"key"</span>]) &gt; <span class="hljs-number">0</span>:
+        clauses += clauses_lock_and_key(
+            var2n, t_max, coords[<span class="hljs-string">"lock"</span>][<span class="hljs-number">0</span>], coords[<span class="hljs-string">"key"</span>][<span class="hljs-number">0</span>]
+        )
+
+    <span class="hljs-comment"># on doit être à côté d'une demoness à la fin</span>
+    clauses.append(
+        [
+            var2n[(<span class="hljs-string">"at"</span>, t_max, coord)]
+            <span class="hljs-keyword">for</span> demoness <span class="hljs-keyword">in</span> coords[<span class="hljs-string">"demonesses"</span>]
+            <span class="hljs-keyword">for</span> coord <span class="hljs-keyword">in</span> adjacent(demoness)
+            <span class="hljs-keyword">if</span> coord <span class="hljs-keyword">in</span> coords[<span class="hljs-string">"cells"</span>]
+        ]
+    )
+
+    <span class="hljs-keyword">return</span> var2n, clauses
+</div></div></code></pre><h4 id="Fonction-clauses_to_dimacs" data-id="Fonction-clauses_to_dimacs"><a class="anchor hidden-xs" href="#Fonction-clauses_to_dimacs" title="Fonction-clauses_to_dimacs"><span class="octicon octicon-link"></span></a><span>Fonction clauses_to_dimacs</span></h4><pre><code class="python hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-keyword">def</span> <span class="hljs-title function_">clauses_to_dimacs</span>(<span class="hljs-params">clauses: <span class="hljs-built_in">set</span>[Clause], numvar: <span class="hljs-built_in">int</span></span>) -&gt; <span class="hljs-built_in">str</span>:
+    <span class="hljs-string">"""
+    :param clauses: list of all clauses corresponding to the problem
+    :param numvar: number of variables
+    :return: string
+    """</span>
+    dimacs = <span class="hljs-string">"c Helltaker SAT\np cnf "</span> + <span class="hljs-built_in">str</span>(numvar) + <span class="hljs-string">" "</span> + <span class="hljs-built_in">str</span>(<span class="hljs-built_in">len</span>(clauses)) + <span class="hljs-string">"\n"</span>
+    <span class="hljs-keyword">for</span> clause <span class="hljs-keyword">in</span> clauses:
+        <span class="hljs-keyword">for</span> atom <span class="hljs-keyword">in</span> clause:
+            dimacs += <span class="hljs-built_in">str</span>(atom) + <span class="hljs-string">" "</span>
+        dimacs += <span class="hljs-string">"0\n"</span>
+    <span class="hljs-keyword">return</span> dimacs
+</div></div></code></pre><h4 id="Fonction-clauses_spikes" data-id="Fonction-clauses_spikes"><a class="anchor hidden-xs" href="#Fonction-clauses_spikes" title="Fonction-clauses_spikes"><span class="octicon octicon-link"></span></a><span>Fonction clauses_spikes</span></h4><pre><code class="python hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-keyword">def</span> <span class="hljs-title function_">clauses_spikes</span>(<span class="hljs-params">var2n: <span class="hljs-built_in">dict</span>, t_max: <span class="hljs-built_in">int</span>, position: Coord</span>) -&gt; <span class="hljs-type">List</span>[Clause]:
+    <span class="hljs-string">"""
+    :param var2n: dict giving the corresponding number for each variable
+    :param t_max: horizon
+    :param position: cell position
+    :return: clauses corresponding to spikes
+    """</span>
+    clauses = []
+
+    <span class="hljs-comment"># interdit de hurt si pas sur spike</span>
+    clauses += [
+        [
+            -var2n[(<span class="hljs-string">"at"</span>, t, position)],
+            -var2n[(<span class="hljs-string">"do"</span>, t, <span class="hljs-string">"hurt"</span>)],
+            var2n[(<span class="hljs-string">"spike"</span>, t, position)],
+        ]
+        <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max)
+    ]
+
+    <span class="hljs-comment"># pas hurt deux tours de suite</span>
+    clauses += [
+        [-var2n[(<span class="hljs-string">"do"</span>, t, <span class="hljs-string">"hurt"</span>)], -var2n[(<span class="hljs-string">"do"</span>, t + <span class="hljs-number">1</span>, <span class="hljs-string">"hurt"</span>)]]
+        <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max - <span class="hljs-number">1</span>)
+    ]
+
+    <span class="hljs-comment"># obliger de hurt si sur spike et pas hurt au dernier tour</span>
+    clauses += [
+        [
+            var2n[(<span class="hljs-string">"do"</span>, t - <span class="hljs-number">1</span>, <span class="hljs-string">"hurt"</span>)],
+            var2n[(<span class="hljs-string">"do"</span>, t, <span class="hljs-string">"hurt"</span>)],
+            -var2n[(<span class="hljs-string">"at"</span>, t, position)],
+            -var2n[(<span class="hljs-string">"spike"</span>, t, position)],
+        ]
+        <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, t_max)
+    ]
+
+    <span class="hljs-keyword">return</span> clauses
+</div></div></code></pre><h4 id="Fonction-clauses_traps" data-id="Fonction-clauses_traps"><a class="anchor hidden-xs" href="#Fonction-clauses_traps" title="Fonction-clauses_traps"><span class="octicon octicon-link"></span></a><span>Fonction clauses_traps</span></h4><pre><code class="python hljs"><div class="wrapper"><div class="gutter linenumber"><span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span></div><div class="code"><span class="hljs-keyword">def</span> <span class="hljs-title function_">clauses_traps</span>(<span class="hljs-params">var2n: <span class="hljs-built_in">dict</span>, t_max: <span class="hljs-built_in">int</span>, position: Coord</span>) -&gt; <span class="hljs-type">List</span>[Clause]:
+    <span class="hljs-string">"""
+    :param var2n: dict giving the corresponding number for each variable
+    :param t_max: horizon
+    :param position: cell position
+    :return: clauses corresponding to traps
+    """</span>
+    clauses = []
+
+    <span class="hljs-comment"># un trap unsafe est équivalent à un spike</span>
+    clauses += [
+        [var2n[(<span class="hljs-string">"trap"</span>, t, position)], var2n[(<span class="hljs-string">"spike"</span>, t, position)]]
+        <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max)
+    ]
+
+    <span class="hljs-comment"># un trap safe n'est pas un spike</span>
+    clauses += [
+        [-var2n[(<span class="hljs-string">"trap"</span>, t, position)], -var2n[(<span class="hljs-string">"spike"</span>, t, position)]]
+        <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max)
+    ]
+
+    <span class="hljs-comment"># un trap unsafe reste unsafe si l'action est hurt</span>
+    clauses += [
+        [
+            -var2n[(<span class="hljs-string">"do"</span>, t, <span class="hljs-string">"hurt"</span>)],
+            var2n[(<span class="hljs-string">"trap"</span>, t, position)],
+            -var2n[(<span class="hljs-string">"trap"</span>, t + <span class="hljs-number">1</span>, position)],
+        ]
+        <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max)
+    ]
+
+    <span class="hljs-comment"># un trap safe reste safe si l'action est hurt</span>
+    clauses += [
+        [
+            -var2n[(<span class="hljs-string">"do"</span>, t, <span class="hljs-string">"hurt"</span>)],
+            -var2n[(<span class="hljs-string">"trap"</span>, t, position)],
+            var2n[(<span class="hljs-string">"trap"</span>, t + <span class="hljs-number">1</span>, position)],
+        ]
+        <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max)
+    ]
+
+    <span class="hljs-comment"># un trap unsafe devient safe si l'action n'est pas hurt</span>
+    clauses += [
+        [
+            var2n[(<span class="hljs-string">"do"</span>, t, <span class="hljs-string">"hurt"</span>)],
+            var2n[(<span class="hljs-string">"trap"</span>, t, position)],
+            var2n[(<span class="hljs-string">"trap"</span>, t + <span class="hljs-number">1</span>, position)],
+        ]
+        <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max)
+    ]
+
+    <span class="hljs-comment"># un trap safe devient unsafe si l'action n'est pas hurt</span>
+    clauses += [
+        [
+            var2n[(<span class="hljs-string">"do"</span>, t, <span class="hljs-string">"hurt"</span>)],
+            -var2n[(<span class="hljs-string">"trap"</span>, t, position)],
+            -var2n[(<span class="hljs-string">"trap"</span>, t + <span class="hljs-number">1</span>, position)],
+        ]
+        <span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(t_max)
+    ]
+
+    <span class="hljs-keyword">return</span> clauses
+</div></div></code></pre><h4 id="Supplément--Les-règles" data-id="Supplément--Les-règles"><a class="anchor hidden-xs" href="#Supplément--Les-règles" title="Supplément--Les-règles"><span class="octicon octicon-link"></span></a><span>Supplément : Les règles</span></h4><p><span>Pour représenter le problème, voici les règles que nous avons explicité pour pouvoir ensuite les transformer en clauses. La grande majorité des clauses sont à écrire pour tout instant t allant de 0 à la valeur maximale.</span></p><p><strong><span>Position et déplacement du héro</span></strong></p><ul>
+<li><span>Le héros doit se trouver à un endroit précis au départ.</span></li>
+<li><span>Le héros doit se trouver à un seul endroit par instant t.</span></li>
+<li><span>Le héros peut se déplacer sur les cases voisines seulement.</span></li>
+<li><span>Le héros ne peut pas marcher sur un mur ou dépasser un bord.</span></li>
+</ul><p><strong><span>Pics</span></strong></p><ul>
+<li><span>Le héros est blessé quand il est sur un pic et ne peut donc pas se déplacer.</span></li>
+<li><span>Le héros perd un temps quand il est sur un pic.</span></li>
+</ul><p><strong><span>Pièges</span></strong></p><ul>
+<li><span>Un piège activé a les mêmes effets qu’un pic et un inactivé n’a pas les mêmes effets.</span></li>
+<li><span>Un piège s’active et se désactive à chaque fois que le héros se déplace</span></li>
+</ul><p><strong><span>Verrou et clé</span></strong></p><ul>
+<li><span>Le héros ne peut pas aller sur un verrou s’il n’a pas la clé</span></li>
+<li><span>Le héros n’a pas la clé au départ</span></li>
+</ul><p><strong><span>Arrivée</span></strong></p><ul>
+<li><span>Le héros doit arriver à côté de la démonne au temps maximum.</span></li>
+</ul><p><span>Nous expliquons en partie 3.2. comment nous avons écrit les clauses.</span><br>
+<span>Celles-ci sont rassemblées dans la fonction </span><em><span>level_data_to_clauses()</span></em><span> disponible en Annexe.</span></p></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#Rapport-AI27---Helltaker" title="Rapport AI27 - Helltaker">Rapport AI27 - Helltaker</a><ul class="nav">
+<li class="invisable-node"><ul class="nav">
+<li class=""><a href="#Pierre-Gibertini---Anne-Soline-Guilbert–Ly---Romane-Dauge" title="Pierre Gibertini - Anne-Soline Guilbert–Ly - Romane Dauge">Pierre Gibertini - Anne-Soline Guilbert–Ly - Romane Dauge</a></li>
+</ul>
+</li>
+<li class=""><a href="#Table-des-matières" title="Table des matières">Table des matières</a></li>
+<li class=""><a href="#1-Introduction" title="1. Introduction">1. Introduction</a></li>
+<li class=""><a href="#2-Préliminaires" title="2. Préliminaires">2. Préliminaires</a><ul class="nav">
+<li class=""><a href="#21-Présentation-des-règles-du-jeu" title="2.1 Présentation des règles du jeu">2.1 Présentation des règles du jeu</a></li>
+<li class=""><a href="#22-Le-problème-en-STRIPS" title="2.2 Le problème en STRIPS">2.2 Le problème en STRIPS</a></li>
+</ul>
+</li>
+<li class=""><a href="#3-Méthode-1--ASPPLAN" title="3. Méthode 1 : ASPPLAN">3. Méthode 1 : ASPPLAN</a><ul class="nav">
+<li class=""><a href="#31-Représentation-du-problème" title="3.1  Représentation du problème">3.1  Représentation du problème</a></li>
+<li class=""><a href="#32-Choix-d’implémentation-et-structures-de-données" title="3.2  Choix d’implémentation et structures de données">3.2  Choix d’implémentation et structures de données</a></li>
+<li class=""><a href="#33-Expérimentations-pratiques" title="3.3  Expérimentations pratiques">3.3  Expérimentations pratiques</a></li>
+</ul>
+</li>
+<li class=""><a href="#4-Méthode-2--SATPLAN" title="4. Méthode 2 : SATPLAN">4. Méthode 2 : SATPLAN</a><ul class="nav">
+<li class=""><a href="#41-Représentation-du-problème" title="4.1  Représentation du problème">4.1  Représentation du problème</a></li>
+<li class=""><a href="#42-Choix-d’implémentation-et-structures-de-données" title="4.2  Choix d’implémentation et structures de données">4.2  Choix d’implémentation et structures de données</a></li>
+<li class=""><a href="#43-Expérimentations-pratiques" title="4.3  Expérimentations pratiques">4.3  Expérimentations pratiques</a></li>
+<li class=""><a href="#44-Perspectives-d’amélioration" title="4.4  Perspectives d’amélioration">4.4  Perspectives d’amélioration</a></li>
+</ul>
+</li>
+<li><a href="#5-Comparaison-expérimentale-des-2-méthodes" title="5.  Comparaison expérimentale des 2 méthodes">5.  Comparaison expérimentale des 2 méthodes</a></li>
+<li class=""><a href="#6-Annexes" title="6.  Annexes">6.  Annexes</a><ul class="nav">
+<li class=""><a href="#61-STRIPS-complet" title="6.1 STRIPS complet">6.1 STRIPS complet</a></li>
+<li class=""><a href="#62-Fonctions-Python-du-solveur-SAT" title="6.2 Fonctions Python du solveur SAT">6.2 Fonctions Python du solveur SAT</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#Rapport-AI27---Helltaker" title="Rapport AI27 - Helltaker">Rapport AI27 - Helltaker</a><ul class="nav">
+<li class="invisable-node"><ul class="nav">
+<li class=""><a href="#Pierre-Gibertini---Anne-Soline-Guilbert–Ly---Romane-Dauge" title="Pierre Gibertini - Anne-Soline Guilbert–Ly - Romane Dauge">Pierre Gibertini - Anne-Soline Guilbert–Ly - Romane Dauge</a></li>
+</ul>
+</li>
+<li class=""><a href="#Table-des-matières" title="Table des matières">Table des matières</a></li>
+<li class=""><a href="#1-Introduction" title="1. Introduction">1. Introduction</a></li>
+<li class=""><a href="#2-Préliminaires" title="2. Préliminaires">2. Préliminaires</a><ul class="nav">
+<li class=""><a href="#21-Présentation-des-règles-du-jeu" title="2.1 Présentation des règles du jeu">2.1 Présentation des règles du jeu</a></li>
+<li class=""><a href="#22-Le-problème-en-STRIPS" title="2.2 Le problème en STRIPS">2.2 Le problème en STRIPS</a></li>
+</ul>
+</li>
+<li class=""><a href="#3-Méthode-1--ASPPLAN" title="3. Méthode 1 : ASPPLAN">3. Méthode 1 : ASPPLAN</a><ul class="nav">
+<li class=""><a href="#31-Représentation-du-problème" title="3.1  Représentation du problème">3.1  Représentation du problème</a></li>
+<li class=""><a href="#32-Choix-d’implémentation-et-structures-de-données" title="3.2  Choix d’implémentation et structures de données">3.2  Choix d’implémentation et structures de données</a></li>
+<li class=""><a href="#33-Expérimentations-pratiques" title="3.3  Expérimentations pratiques">3.3  Expérimentations pratiques</a></li>
+</ul>
+</li>
+<li class=""><a href="#4-Méthode-2--SATPLAN" title="4. Méthode 2 : SATPLAN">4. Méthode 2 : SATPLAN</a><ul class="nav">
+<li class=""><a href="#41-Représentation-du-problème" title="4.1  Représentation du problème">4.1  Représentation du problème</a></li>
+<li class=""><a href="#42-Choix-d’implémentation-et-structures-de-données" title="4.2  Choix d’implémentation et structures de données">4.2  Choix d’implémentation et structures de données</a></li>
+<li class=""><a href="#43-Expérimentations-pratiques" title="4.3  Expérimentations pratiques">4.3  Expérimentations pratiques</a></li>
+<li class=""><a href="#44-Perspectives-d’amélioration" title="4.4  Perspectives d’amélioration">4.4  Perspectives d’amélioration</a></li>
+</ul>
+</li>
+<li><a href="#5-Comparaison-expérimentale-des-2-méthodes" title="5.  Comparaison expérimentale des 2 méthodes">5.  Comparaison expérimentale des 2 méthodes</a></li>
+<li class=""><a href="#6-Annexes" title="6.  Annexes">6.  Annexes</a><ul class="nav">
+<li class=""><a href="#61-STRIPS-complet" title="6.1 STRIPS complet">6.1 STRIPS complet</a></li>
+<li class=""><a href="#62-Fonctions-Python-du-solveur-SAT" title="6.2 Fonctions Python du solveur SAT">6.2 Fonctions Python du solveur SAT</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
